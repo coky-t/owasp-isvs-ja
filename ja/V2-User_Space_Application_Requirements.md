@@ -45,6 +45,13 @@
 | **2.4.2** | 暗号化の適切な使用を検証します。十分な鍵サイズと安全な実装を備えた、標準的で強力なアルゴリズムのみを使用する必要があります。 | ✓ | ✓ | ✓ |
 | **2.4.3** | ンダム性の安全なソースがすべてのセキュリティニーズに対してオペレーティングシステムやハードウェアにより提供されていることを検証します。 | | ✓ | ✓ |
 | **2.4.4** | 専用のセキュリティチップが提供する機能を利用して、デバイスで使用される暗号化シークレットが安全に保存されていることを検証します。 | | ✓ | ✓ |
-| **2.4.5** | 使用されている暗号化ライブラリが FIPS 140-2 認定または同程度のものであることを検証します。 | | ✓ | ✓ |
+| **2.4.5** | 使用されている暗号化ライブラリが認知されている暗号化セキュリティ標準に準拠していることが認証されていることを検証します。 | | ✓ | ✓ |
 
 ## 参考情報
+詳細については、以下も参照してください。
+- OWASP Authentication Cheat Sheet: <https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html>
+- OWASP Access Control Cheat Sheet: <https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html>
+- OWASP Top 10 Privacy Countermeasures: <https://owasp.org/www-pdf-archive/OWASP_Top_10_Privacy_Countermeasures_v1.0.pdf>
+- NIST SP800-63B - Digital Identity Guidelines: <https://pages.nist.gov/800-63-3/sp800-63b.html> 
+- FIPS 140-2 (Security Requrements for Cryptographic Modules): <https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.140-2.pdf>
+- ECRYPT CSA - D5.4 - Algorithms, Key Size and Protocols Report (2018): <https://www.ecrypt.eu.org/csa/documents/D5.4-FinalAlgKeySizeProt.pdf>
