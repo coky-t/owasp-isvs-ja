@@ -1,0 +1,11 @@
+# 用語集
+- **Cryptographic material** - lorem ipsum.
+- **Device** - lorem ipsum.
+- **Firmware** - lorem ipsum.
+- **GPL** - lorem ipsum.
+- **IoT** - lorem ipsum.
+- **PCB** - lorem ipsum.
+- **privileged locations** - lorem ipsum.
+- **Security chip** - lorem ipsum.
+- **Sensitive information** - lorem ipsum.
+- **Supporting platform** - lorem ipsum. 
