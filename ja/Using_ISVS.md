@@ -8,7 +8,7 @@ ISVS により提供されるさまざまなセキュリティコントロール
 
 <figure class="image">
 <img src="https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/raw/dev/en/images/ISVS-Overview.png" height="500" alt="Figure 1. The different security controls of the ISVS" />
-<figcaption>Figure 1. The different security controls of the ISVS</figcaption>
+<figcaption>図 1. ISVS のさまざまなセキュリティコントロール</figcaption>
 </figure>
 
 
