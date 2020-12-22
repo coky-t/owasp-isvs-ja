@@ -1,11 +1,9 @@
 # 用語集
-- **Cryptographic material** - lorem ipsum.
-- **Device** - lorem ipsum.
-- **Firmware** - lorem ipsum.
-- **GPL** - lorem ipsum.
-- **IoT** - lorem ipsum.
-- **PCB** - lorem ipsum.
-- **privileged locations** - lorem ipsum.
-- **Security chip** - lorem ipsum.
-- **Sensitive information** - lorem ipsum.
-- **Supporting platform** - lorem ipsum. 
+- **暗号化マテリアル (Cryptographic material)** - 暗号化情報を含み、通信の暗号化、復号化、認証に不可欠なドキュメント、デバイス、機器などのすべてのマテリアルです。
+- **デバイス (Device)** - データの保存、生成、処理が可能なエンドポイントデバイスです。一般的な IoT デバイスにはセンサー、アクチュエータ、および場合によってはユーザーインタフェースが組み込まれます。
+- **ファームウェア (Firmware)** - 命令およびアプリケーションインタフェースを介してデバイスのハードウェアコンポーネントと通信するソフトウェアです。
+- **[GPL](https://www.gnu.org/licenses/quick-guide-gplv3.html)** - あらゆる目的でソフトウェアを使用する自由、ソフトウェアを変更する自由、ソフトウェアを共有する自由、行われた変更を共有する自由を許可する General Public License です。
+- **PCB** - PCB は **プリント回路基板 (printed circuit board)** の頭文字です。これは電気信号を介してコンポーネントを接続するライン (トレース) とパッドを含むボードです。
+- **特権の場所 (Privileged locations)** - 昇格されたアクセスとパーミッションセットを必要とするハードウェアまたはソフトウェアの領域です。
+- **セキュリティチップ (Security chip)** - セキュリティチップはセキュアブート、セキュアストレージ、保存データの暗号化の基盤を提供し、ハードウェアの信頼のルートの基礎となります。多くの場合システムオンチップ (SoC) およびフィールドプログラマブルゲートアレイ (FPGA) 内のコプロセッサですが、トラステッドプラットフォームモジュール (TPM) およびセキュアクレーブとも呼ばれます。
+- **機密情報 (Sensitive information)** - 個人識別情報 (PII)、保護対象保険情報 (PHI)、カード所有者データ、秘密鍵、資格情報、EU 一般データ保護規則 (GDPR) で定義された個人データなど、不正アクセスに対する保護が必要なデータです。
