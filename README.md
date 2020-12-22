@@ -6,7 +6,7 @@ This is the unofficial Japanese translation of the [OWASP IoT Security Verificat
 
 [![Creative Commons License](https://licensebuttons.net/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/ "CC BY-SA 4.0")
 
-OWASP Internet of Things セキュリティ検証標準 (ISVS) は Internet of Things (IoT) アプリケーションのセキュリティ要件を提供します。ISVS により提供される要件は IoT アプリケーションの SDLC における多くのステップで使用できます。たとえば、設計フェーズでの設計者や、既存の IoT アプリケーションのセキュリティ体制を評価したいセキュリティ専門家などです。
+OWASP Internet of Things セキュリティ検証標準 (ISVS) は Internet of Things (IoT) アプリケーションに対するセキュリティ要件のフレームワークを確立するためのコミュニティの取り組みです。ISVS が提供する要件は IoT アプリケーションの設計、開発、テストなどのソフトウェア開発ライフサイクル (SDLC) の多くのステージで使用できます。
 
 IoT アプリケーションはたいてい相互接続された多くのアプリケーションで構成され、共に複雑なエコシステムを形成します。そのため IoT アプリケーションの保護はエコシステムの保護に帰着します。したがって ISVS は業界で受け入れられている既存の標準を可能な限り参照しながら、組み込みアプリケーションとそれらが存在する IoT エコシステムに対するセキュリティ要件を規定します。
 
