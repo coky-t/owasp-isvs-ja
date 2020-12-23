@@ -2,6 +2,14 @@
 
 ## 管理目標
 
+この章に記載されているコントロールの目的は、ユーザーとマシンによる IoT システムへのセキュアなアクセスを確保し、セキュリティベストプラクティスを使用して機密データを保護することです。
+
+アクセスを保護するには認証と認可が必要です。関連するコントロールには強力で一意のセキュアな ID、ユーザーロールの分離、最小権限の概念が含まれます。認証とは誰か (または何か) の身元を本物であると確立または確認する行為であり、人物またはデバイスに関する主張が正しく、なりすましではないと信じる根拠となります。さらに必要なコントロールにはパスワードなどの認証資格情報のリカバリや傍受の防止が含まれます。認可とは誰か (または何か) がセキュアアクセスポリシーを満たすリソースやアクションへのアクセス権を持つことを確立または確認する行為です。
+
+データやコードを含むファイルやメモリの内容などのシステムリソースをセキュアに使用するには、資格情報を含む機密データの保護と個人情報の公正な取り扱いが必要です。
+
+この章の多くのコントロールは暗号化を通じて実装されます。したがって適切な暗号化プリミティブを選択し、セキュアな資格情報ストレージで構成するためには追加のコントロールが必要です。
+
 ## セキュリティ検証要件
 
 ### 同一性証明および認証
@@ -50,6 +58,7 @@
 
 ## 参考情報
 詳細については、以下も参照してください。
+
 - OWASP Authentication Cheat Sheet: <https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html>
 - OWASP Access Control Cheat Sheet: <https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html>
 - OWASP Top 10 Privacy Countermeasures: <https://owasp.org/www-pdf-archive/OWASP_Top_10_Privacy_Countermeasures_v1.0.pdf>
