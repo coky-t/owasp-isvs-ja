@@ -2,14 +2,13 @@
 
 OWASP Internet of Things セキュリティ検証標準 (ISVS) は、コネクテッドデバイスに対して要件とベストプラクティスを提供することにより、IoT アプリケーションのセキュリティに対する信頼レベルを確立することを目的としています。
 
+IoT アプリケーションは多くの場合、複雑なエコシステムを形成する相互接続された多くのアプリケーションで構成されています。そのため IoT アプリケーションの保護はエコシステムの保護につながります。したがって、ISVS は業界で受け入れられている既存の標準を可能な限り参照しながら、組み込みアプリケーションとそれらが存在する IoT エコシステムのセキュリティ要件を明示します。
+
 ## ISVS セキュリティモデル
 
 ISVS により提供されるセキュリティコントロール要件はスタックとして表すことができます。最下部には、ハードウェアプラットフォームに対する要件 ([V5](V5-Hardware_Platform_Requirements.md)) が示されています。ISVS 全体を通して、ハードウェアプラットフォームはコネクテッドデバイスの基盤を構成するさまざまなハードウェアコンポーネントとみなされます。ハードウェアプラットフォームの上にはソフトウェアプラットフォーム ([V3](V3-Software_Platform_Requirements.md)) および通信 ([V4](V4-Communication_Requirements.md)) 要件があり、ハードウェアプラットフォームを利用してリッチアプリケーションの開発を可能にします。これらのアプリケーションに対する要件はユーザー空間アプリケーション要件レイヤー ([V2](V2-User_Space_Application_Requirements.md)) で提供されます。最後に、IoT エコシステムの章ではコネクテッドデバイスと周囲のエコシステムとの間をつなぐ一連の要件を提供します ([V1](V1-IoT_Ecosystem_Requirements.md)) 。
 
-<figure class="image">
-<img src="https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS/raw/dev/en/images/ISVS-Overview.png" height="500" alt="Figure 1. The different security controls of the ISVS" />
-<figcaption>図 1. ISVS のさまざまなセキュリティコントロール</figcaption>
-</figure>
+![](./images/ISVS-Overview-small.png)
 
 
 
