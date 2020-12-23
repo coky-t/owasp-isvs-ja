@@ -2,6 +2,14 @@
 
 ## 管理目標
 
+デバイスはネットワーク通信を使用してエコシステム内でデータを交換し、コマンドを受信します。さまざまな関係者が通信の内容を信頼できるように、関係者を保護し、関係者の真正性、悪意のある変更に対する完全性、情報漏洩に対する機密性を確保する必要があります。実際には、これは最新の通信プロトコルを展開し、暗号化を含むそれらのセキュリティ機能を構成することを意味します。セキュアな TLS, Bluetooth, および Wi-Fi に関する業界ガイドラインは頻繁に変更されるため、通信セキュリティが常に効果的であることを確保するために、構成を定期的にレビューする必要があります。
+
+- 送信されるデータの機密性に関係なく、常に TLS または同等の強力な暗号化と認証を使用します。
+- その他のセキュリティプラクティスにはピンニングと相互認証を備える証明書ベースの認証が含まれます。
+- 最新の構成を使用して、通信に使用されるアルゴリズムと暗号の優先順序を有効にして設定します。
+- 非推奨または既知のセキュアではないアルゴリズムと暗号を無効にします。
+- Bluetooth と Wi-Fi 通信で利用可能な最も強力なセキュリティ設定を使用します。
+
 ## セキュリティ検証要件
 
 ### 一般
@@ -13,6 +21,7 @@
 | **4.1.3** | TLS を使用する場合はデバイスが X.509 証明書を暗号で検証することを検証します。 | ✓ | ✓ | ✓ |
 | **4.1.4** | 可用性が重要なアプリケーションについて、妨害からの保護または検出が提供されていることを検証します。 | | ✓ | ✓ |
 | **4.1.6** | デバイスの TLS 実装が独自の証明書ストアを使用し、エンドポイント証明書または公開鍵にピン留めし、信頼できる CA により署名されている場合でも異なる証明書または鍵を持つエンドポイントからの接続を許可しないことを検証します。 | | ✓ | ✓ |
+| **4.1.7** | チップ間通信が暗号化されていることを検証します。 (メインボードからドーターボードへの通信など) | | | ✓ |
 
 ### マシン間
 
@@ -47,7 +56,8 @@
 
 ## 参考情報
 詳細については、以下も参照してください。
-- OWASP Transport Layer Protection Cheat Sheet : <https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html>
+
+- OWASP Transport Layer Protection Cheat Sheet: <https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html>
 - NIST SP800-52r2 - Guidelines for the Selection, Configuration, and Use of TLS Implementations: <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r2.pdf>
 - IETF RFC 7525 - Recommendations for Secure Use of TLS and DTLS: <https://tools.ietf.org/html/rfc7525>
 - NIST SP800-121r2 - Guide to Bluetooth Security: <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-121r2.pdf>
