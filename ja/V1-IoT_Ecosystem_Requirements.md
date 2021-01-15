@@ -18,10 +18,10 @@
 | -- | ---------------------- | - | - | - |
 | **1.1.1** | IoT エコシステム内のすべてのアプリケーションがアプリケーションのセキュリティ重要度に沿ったセキュリティレベルで開発されていることを検証します。 | ✓ | ✓ | ✓ |
 | **1.1.2** | IoT アプリケーションのエコシステム内のすべてのコンポーネントと通信チャネルが識別され、必要とされていることがわかっていることを検証します。必要ないものはすべて削除または無効にします。 | ✓ | ✓ | ✓ |
-| **1.1.3** | 機密情報とセキュリティ上の重要なアクションが識別および文書化されていることを検証します。 | ✓ | ✓ | ✓ |
+| **1.1.3** | 可能性のある脅威を特定し、セキュリティテストをガイドする適切なリスク対応を促進するために、各製品導入設計 (つまり新規および成熟) およびセキュリティ関連機能変更の一環としての脅威モデリングの使用を検証します。 | ✓ | ✓ | ✓ |
 | **1.1.4** | 機密データがエコシステム内に保存されている場所が明確に識別され、非特権の保存場所から分離されていることを検証します。 | ✓ | ✓ | ✓ |
 | **1.1.5** | セキュリティコントロールがサーバー側で実施されていること、およびデータと命令がサーバー側コンポーネントにより盲目的に信頼されてはいないことを検証します。 | ✓ | ✓ | ✓ |
-| **1.1.6** | 責任ある開示ポリシーが確立されており、企業のウェブサイトで簡単に見つけられることを検証します。脆弱性を安全に伝達する方法とそれらをフォローアップする方法について、ポリシーが明確な概要を提供していることを確認します。 | ✓ | | |
+| **1.1.6** | 責任ある開示ポリシーが確立されており、企業のウェブサイトで簡単に見つけられることを検証します。脆弱性を安全に伝達する方法とそれらをフォローアップする方法について、ポリシーが明確な概要を提供していることを確認します。 | ✓ | ✓ | ✓ |
 | **1.1.7** | 確立された通信チャネル (ウェブサイト、電子メールなど) を通じて脆弱性が特定された際に、ユーザーおよび関係する利害関係者に通知されることを検証します。 | ✓ | ✓ | ✓ |
 
 
@@ -65,6 +65,7 @@
 - OWASP MASVS: <https://github.com/OWASP/owasp-masvs>
 - OWASP Threat modelling: <https://owasp.org/www-community/Application_Threat_Modeling>
 - OWASP SCVS: <https://github.com/OWASP/Software-Component-Verification-Standard>
+- OWASP Software Assurance Maturity Model: <https://owaspsamm.org/>
 - OWASP Secure SDLC Cheat Sheet: <https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets_excluded/Secure_SDLC_Cheat_Sheet.md>
 - Microsoft SDL: <https://www.microsoft.com/en-us/sdl/>
 - OWASP C-based Toolchain Hardening Cheat Sheet: <https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html>
