@@ -6,7 +6,7 @@
 
 オペレーティングシステム、特にそのカーネル、は特権モードで実行され、多くのセキュリティプリミティブを含む重要なデバイス機能を実装するため、デバイスセキュリティの中心となります。これにはオペレーティングシステムとカーネルの構成と堅牢化のための最善のセキュリティプラクティスが必要です。
 
-Linux オペレーティングシステムは IoT で最も人気のあるものの一つです。名前空間と cgroup によりサポートされる分離メカニズムや、アクセス制御用の追加のカーネルセキュリティモジュールなど、一次セキュリティから多層防御まで多くの機能があります。
+Linux オペレーティングシステムは IoT で最も人気のあるものの一つです。名前空間と cgroup によりサポートされる分離メカニズムや、アクセス制御用の追加のカーネルセキュリティモジュールなど、一次セキュリティから多層防御まで多くの機能があります。コンテナ内で実行するサードパーティアプリケーションを構成および展開する場合は、これらの分離メカニズムを活用します。
 
 ## セキュリティ検証要件
 
@@ -28,7 +28,7 @@ Linux オペレーティングシステムは IoT で最も人気のあるもの
 
 | # | 説明 | L1 | L2 | L3 |
 | --  | ---------------------- | - | - | - |
-| **3.2.1** | 組み込みオペレーティングシステムが業界のベストプラクティス、ベンチマークにしたがって構成され、安全なデフォルトを使用していることを検証します。 | ✓ | ✓ | ✓ |
+| **3.2.1** | 組み込みオペレーティングシステムが業界の最新のベストプラクティス、CIS または SCAP ベンチマーク (適用可能である場合) にしたがって構成され、安全なデフォルトを使用していることを検証します。 | ✓ | ✓ | ✓ |
 | **3.2.2** | デバイスにより公開されているすべてのネットワークインタフェース上のすべてのネットワークサービスが必要なサービスであること、および不要なサービスが削除または無効化されていることを検証します。 | ✓ | ✓ | ✓ |
 | **3.2.3** | デバイスが Telnet や FTP などのレガシーまたは安全でないプロトコルを使用していないことを検証します。 | ✓ | ✓ | ✓ |
 | **3.2.4** | OS カーネルとソフトウェアコンポーネントが最新であり、既知の脆弱性を含んでいないことを検証します。 | ✓ | ✓ | ✓ |
@@ -38,7 +38,7 @@ Linux オペレーティングシステムは IoT で最も人気のあるもの
 | **3.2.8** | ハードウェアレベルのメモリ保護が使用され、特権レベルが適用されていることを検証します。 | ✓ | ✓ | ✓ |
 | **3.2.9** | 組み込み OS が RAM への不正アクセス (RAM スクランブリングなど) に対する保護を提供していることを検証します。 | | | ✓ |
 | **3.2.10** | 完全性測定アーキテクチャ (Integrity Measurement Architecture, IMA) が使用され、適切に構成されていることを検証します。 | | | ✓ |
-| **3.2.11** | サードパーティアプリケーションとサービスがコンテナ化されたランタイム環境 (LXC, Docker など) 内で実行するように構成されていることを検証します。 | | | ✓ |
+| **3.2.11** | サードパーティアプリケーションが、ホストオペレーティングシステムから適切に分離されるように堅牢化された、コンテナ化されたランタイム環境 (Linux コンテナ、Docker など) 内で実行するように構成されていることを検証します。 | | | ✓ |
 
 #### Linux
 
@@ -87,6 +87,10 @@ Linux オペレーティングシステムは IoT で最も人気のあるもの
 
 - ENISA - Baseline Security Recommendations for IoT: <https://www.enisa.europa.eu/publications/baseline-security-recommendations-for-iot/at_download/fullReport>
 - CIS Benchmarks: <https://www.cisecurity.org/cis-benchmarks/>
+- SCAP: <https://csrc.nist.gov/projects/security-content-automation-protocol/scap-content>
 - TGC Guidance for Secure Update of Software and Firmware on Embedded Systems: <https://trustedcomputinggroup.org/wp-content/uploads/TCG-Secure-Update-of-SW-and-FW-on-Devices-v1r72_pub.pdf>
 - U-Boot documentation - Signature: <https://github.com/u-boot/u-boot/blob/master/doc/uImage.FIT/signature.txt>
 - GSMA - IoT Security Guidelines for Endpoint Systems: <https://www.gsma.com/iot/wp-content/uploads/2017/10/CLP.13-v2.0.pdf>
+- OWASP Docker Top 10: <https://owasp.org/www-project-docker-top-10/>
+- Linux Containers Security (LXC): <https://linuxcontainers.org/lxc/security/>
+- Linux Containers Security (LXD): <https://linuxcontainers.org/lxd/docs/master/security>
