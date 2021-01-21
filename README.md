@@ -2,6 +2,13 @@
 
 This is the unofficial Japanese translation of the [OWASP IoT Security Verification Standard](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS).
 
+### Originator
+
+- Project Site - <https://owasp.org/www-project-iot-security-verification-standard/>
+- Project Repository - <https://github.com/OWASP/www-project-iot-security-verification-standard>
+- Document Site - <https://owasp-isvs.gitbook.io/owasp-isvs-pr/>
+- Document Repository - <https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS>
+
 ## OWASP IoT セキュリティ検証標準 日本語版
 
 [![Creative Commons License](https://licensebuttons.net/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/ "CC BY-SA 4.0")
