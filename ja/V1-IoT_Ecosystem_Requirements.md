@@ -48,11 +48,11 @@
 | **1.3.4** | パッケージが信頼できるソースからダウンロードおよびビルドされていることを検証します。 | ✓ | ✓ | ✓ |
 | **1.3.5** | ビルドパイプラインがバージョン管理システムで保守されているソースコードのビルドのみを実行することを検証します。 | ✓ | ✓ | ✓ |
 | **1.3.6** | コンパイラ、バージョン管理クライアント、開発ユーティリティ、およびソフトウェア開発キットが改竄、トロイの木馬、または悪意のあるコードについて分析および監視されていることを検証します。 | ✓ | ✓ | ✓ |
-| **1.3.7** | パッケージがオブジェクトサイズチェック (Object Size Checking, OSC) ありでコンパイルされていることを検証します。例 -D_FORTIFY_SOURCE=2 | | ✓ | ✓ |
-| **1.3.8** | パッケージが実行防止 (No eXecute, NX) またはデータ実行保護 (Data Execution Protection, DEP) ありでコンパイルされていることを検証します。例 -z,noexecstack | | ✓ | ✓ |
-| **1.3.9** | パッケージが位置独立実行形式 (Position Independent Executable, PIE) ありでコンパイルされていることを検証します。例 -fPIE | | ✓ | ✓ |
-| **1.3.10** | パッケージがスタックスマッシュ保護 (Stack Smashing Protector, SSP) ありでコンパイルされていることを検証します。例 -fstack-protector-all | | ✓ | ✓ |
-| **1.3.11** | パッケージが読み取り専用再配置 (read-only relocation, RELRO) ありでコンパイルされていることを検証します。例 -Wl,-z,relro | | ✓ | ✓ |
+| **1.3.7** | パッケージがオブジェクトサイズチェック (Object Size Checking, OSC) ありでコンパイルされていることを検証します。 (例 -D_FORTIFY_SOURCE=2) | | ✓ | ✓ |
+| **1.3.8** | パッケージが実行防止 (No eXecute, NX) またはデータ実行保護 (Data Execution Protection, DEP) ありでコンパイルされていることを検証します。 (例 -z,noexecstack) | | ✓ | ✓ |
+| **1.3.9** | パッケージが位置独立実行形式 (Position Independent Executable, PIE) ありでコンパイルされていることを検証します。 (例 -fPIE) | | ✓ | ✓ |
+| **1.3.10** | パッケージがスタックスマッシュ保護 (Stack Smashing Protector, SSP) ありでコンパイルされていることを検証します。 (例 -fstack-protector-all) | | ✓ | ✓ |
+| **1.3.11** | パッケージが読み取り専用再配置 (read-only relocation, RELRO) ありでコンパイルされていることを検証します。 (例 -Wl,-z,relro) | | ✓ | ✓ |
 | **1.3.12** | リリースビルドにデバッグコードや特権診断機能が含まれていないことを検証します。 | ✓ | ✓ | ✓ |
 | **1.3.13** | デバッグファームウェアイメージとリリースファームウェアイメージが異なる鍵を使用して署名されていることを検証します。 | | ✓ | ✓ |
 | **1.3.14** | デバッグ情報に PII、資格情報、暗号化マテリアルなどの機密情報が含まれていないことを検証します。 | ✓ | ✓ | ✓ |
@@ -63,7 +63,7 @@
 
 - OWASP ASVS: <https://owasp.org/www-project-application-security-verification-standard/>
 - OWASP MASVS: <https://github.com/OWASP/owasp-masvs>
-- OWASP Threat modelling: <https://owasp.org/www-community/Application_Threat_Modeling>
+- OWASP Threat Modeling: <https://owasp.org/www-community/Application_Threat_Modeling>
 - OWASP SCVS: <https://github.com/OWASP/Software-Component-Verification-Standard>
 - OWASP Software Assurance Maturity Model: <https://owaspsamm.org/>
 - OWASP Secure SDLC Cheat Sheet: <https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets_excluded/Secure_SDLC_Cheat_Sheet.md>
