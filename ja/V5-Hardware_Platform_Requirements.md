@@ -6,7 +6,7 @@
 
 この章に記されているコントロールの目的は、ハードウェアがセキュアな構成に使用できる限り、可能な限り最もセキュアな方法で構成されることを確保することです。これにはデバッグインタフェースの無効化または保護、改竄に対抗するための既存のすべてのアラームとセンサーメカニズムの設定、OTP フューズなどのアンチクローニングハードウェア保護の使用、セキュアなプロセス分離のための MMU (メモリ管理ユニット) の使用が含まれます。
 
-この章ではセキュアな構成を保証するためのハードウェアプラットフォームに対する要件について説明します。たとえば、3.1.4 ではセキュアブートを正しく構成する方法について説明しています。5.1.2 ではプラットフォームがこれをサポートしている必要があります。5.1.1 ではプラットフォームがデバッグインタフェースの無効化をサポートしている必要があります。1.2.4 では出荷時にこれを行う必要があります。
+この章ではセキュアな構成を保証するためのハードウェアプラットフォームに対する要件について説明します。たとえば、3.1.4 ではセキュアブートを正しく構成する方法について説明しています。5.1.2 ではこれをサポートするプラットフォームが必要です。5.1.1 ではプラットフォームがデバッグインタフェースの無効化をサポートしている必要があり、1.2.4 では出荷時にこれを適用する必要があります。
 
 ## セキュリティ検証要件
 
@@ -19,7 +19,7 @@
 | **5.1.3** | メインチップや外部セキュリティチップにより提供される専用機能を活用することなどにより、プラットフォームが暗号化機能を提供していることを検証します。 | | ✓ | ✓ |
 | **5.1.4** | 専用のハードウェアセキュリティ機能を利用して、秘密鍵や証明書などの機密データを安全に保存できることを検証します。 | | ✓ | ✓ |
 | **5.1.5** | プラットフォームがメモリおよび I/O 保護機能を提供し、特権プロセスのみが特定のリソースにアクセスできることを検証します。 | | ✓ | ✓ |
-| **5.1.6** | OTP フューズを燃やすなどにより、プラットフォームのプラットフォームセキュリティ構成をロックできることを検証します。 | | ✓ | ✓ |
+| **5.1.6** | (OTP フューズを燃やすなどにより) プラットフォームのプラットフォームセキュリティ構成をロックできることを検証します。 | | ✓ | ✓ |
 | **5.1.7** | デバッグヘッダが PCB から削除されていることを検証します。 | | ✓  | ✓ |
 | **5.1.8** | 選択したハードウェアに、特定の機能を有効または無効にできる特別なピン構成など、非公式に文書化されたデバッグ機能がないことを検証します。 | | ✓ | ✓ |
 | **5.1.9** | プラットフォームが物理的なディーキャプサレイション、サイドチャネル、グリッチ攻撃に対する保護を提供していることを検証します。 | | | ✓ |
@@ -32,5 +32,5 @@
 - IoT Security - Physical and Hardware Security: <https://www.embedded.com/iot-security-physical-and-hardware-security/>
 - IETF RFC 8576 - IoT Security: State of the Art and Challenges (5.10 Reverse Engineering Considerations): <https://tools.ietf.org/html/rfc8576>
 - ENISA - Baseline Security Recommendations for IoT: <https://www.enisa.europa.eu/publications/baseline-security-recommendations-for-iot/at_download/fullReport>
-- GSMA - IoT Security Guidelines for Endpoint Systems <https://www.gsma.com/iot/wp-content/uploads/2017/10/CLP.13-v2.0.pdf>
+- GSMA - IoT Security Guidelines for Endpoint Systems: <https://www.gsma.com/iot/wp-content/uploads/2017/10/CLP.13-v2.0.pdf>
 - NSA Hardware and Firmware Security Guidance: <https://github.com/nsacyber/Hardware-and-Firmware-Security-Guidance>
