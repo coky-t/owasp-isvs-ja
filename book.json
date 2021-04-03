@@ -1,0 +1,9 @@
+{
+  "root" : "./ja",
+  "plugins" : [ "anchors" ],
+
+  "structure": {
+    "readme": "cover.md"
+  }
+
+}
