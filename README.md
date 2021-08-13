@@ -25,3 +25,11 @@ IoT アプリケーションはたいてい相互接続された多くのアプ�
 * [V4: 通信要件](ja/V4-Communication_Requirements.md)
 * [V5: ハードウェアプラットフォーム要件](ja/V5-Hardware_Platform_Requirements.md)
 * [付録A: 用語集](ja/Appendix_A-Glossary.md)
+
+## License
+
+[Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)
+
+## Author (日本語訳)
+
+[Koki Takeyama](https://github.com/coky-t)
