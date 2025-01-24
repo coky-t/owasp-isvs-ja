@@ -1,6 +1,8 @@
-# 目次
+# OWASP IoT Security Verification Standard ja
 
-- [OWASP IoT セキュリティ検証標準 日本語版](README.md)
+- [OWASP IoT Security Verification Standard ja](README.md)
+
+## OWASP IoT セキュリティ検証標準 日本語版
 
 - [表紙](ja/cover.md)
 - [扉](ja/0x01-Frontispiece.md)
