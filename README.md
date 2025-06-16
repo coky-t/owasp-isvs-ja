@@ -2,6 +2,9 @@
 
 This is the unofficial Japanese translation of the [OWASP IoT Security Verification Standard](https://github.com/OWASP/IoT-Security-Verification-Standard-ISVS).
 
+- Document Site - <https://coky-t.gitbook.io/owasp-ai-security-and-privacy-guide-ja/>
+- Document Repository - <https://github.com/coky-t/owasp-ai-security-and-privacy-guide-ja>
+
 ### Originator
 
 - Project Site - <https://owasp.org/www-project-iot-security-verification-standard/>
@@ -35,3 +38,6 @@ ISVS は IoT システムやそのコンポーネント (IoT ハードウェア�
 ## Translator (Japanese)
 
 [Koki Takeyama](https://github.com/coky-t)
+
+- Document Site - <https://coky-t.gitbook.io/owasp-docs-ja/>
+- Document Repository - <https://github.com/coky-t/owasp-docs-ja>
