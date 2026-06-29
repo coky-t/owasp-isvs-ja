@@ -1,3 +1,9 @@
+---
+layout: default
+title: Frontispiece
+nav_order: 2
+---
+
 # 扉
 
 ## 本標準について
@@ -8,11 +14,11 @@ OWASP Internet of Things セキュリティ検証標準 (ISVS) は Internet of T
 
 ![license](./images/license.png)
 
-Copyright © 2021 The OWASP Foundation.
+Copyright © 2025 The OWASP Foundation.
 
 本書は [Creative Commons Attribution ShareAlike 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/) の下でリリースされています。再使用または配布する場合は、他者に対し本著作物のライセンス条項を明らかにする必要があります。
 
-Version 1.0, 22 January 2021
+Version 1.0, October 2025
 
 ## プロジェクトリーダー
 
