@@ -1,3 +1,9 @@
+---
+layout: default
+title: Appendix A - Glossary
+nav_order: 9
+---
+
 # 用語集
 - **資格情報 (Credentials)** - ユーザー名とパスワード、公開鍵と秘密鍵、API キー、証明書などの認証マテリアルです。
 - **暗号化マテリアル (Cryptographic material)** - 暗号化情報を含み、通信の暗号化、復号化、認証に不可欠なドキュメント、デバイス、機器などのすべてのマテリアルです。
