@@ -1,3 +1,9 @@
+---
+layout: default
+title: V2 - User Space Application Requirements
+nav_order: 5
+---
+
 # V2: ユーザー空間アプリケーション要件
 
 ## 管理目標
@@ -8,7 +14,7 @@
 
 データやコードを含むファイルやメモリの内容などのシステムリソースをセキュアに使用するには、資格情報を含む機密データの保護と個人情報の公正な取り扱いが必要です。
 
-この章の多くのコントロールは暗号化を通じて実装されます。したがって適切な暗号化プリミティブを選択し、セキュアな資格情報ストレージで構成するためには追加のコントロールが必要です。
+この章の多くのコントロールは暗号化を通じて実装されます。したがって適切な暗号化プリミティブを選択し、セキュアな資格情報ストレージで構成するためには追加のコントロールが必要です。For Level 3 devices with operational lifetimes extending beyond 2030, cryptographic implementations must address the emerging threat of quantum computing through post-quantum cryptography (PQC) or hybrid cryptographic approaches combining classical and quantum-resistant algorithms. This ensures long-term confidentiality and authenticity protection aligned with NIST's timeline for quantum-safe cryptography migration (deprecation by 2030, full transition by 2035).
 
 ## セキュリティ検証要件
 
@@ -27,6 +33,8 @@
 | **2.1.9** | ユーザー、デバイス、またはサービスの認証資格情報がファームウェアまたはエコシステムアプリケーションにハードコードされていないことを検証します。 | ✓ | ✓ | ✓ |
 | **2.1.10** | デバイス認証用にプロビジョニングされた資格情報がデバイスごとに一意であることを検証します。 | ✓ | ✓ | ✓ |
 | **2.1.11** | 認証スキームが危殆化したデバイスや廃止されたデバイスの資格情報を失効するように設計されていることを検証します。 | | | ✓ |
+| **2.1.12** | Verify that authentication mechanisms have sufficient protection against brute force attacks (e.g., account lockout, rate limiting, or exponential backoff). | ✓ | ✓ | ✓ |
+| **2.1.13** | Verify that reauthentication of users and devices is required at regular intervals appropriate to the security criticality of the application or functionality. | | ✓ | ✓ |
 
 ### 認可
 
@@ -58,6 +66,8 @@
 | **2.4.4** | 専用のセキュリティチップが提供する機能を利用して、デバイスで使用される暗号化シークレットが安全に保存されていることを検証します。 | | ✓ | ✓ |
 | **2.4.5** | デバイスで使用される暗号化プリミティブが専用のセキュリティチップにより提供されていることを検証します。 | | ✓ | ✓ |
 | **2.4.6** | 使用されている暗号化ライブラリが認知されている暗号化セキュリティ標準に準拠していることが認証されていることを検証します。 | | ✓ | ✓ |
+| **2.4.7** | Verify that for devices with expected operational lifetime beyond 2030, cryptographic implementations support migration to post-quantum algorithms (ML-KEM, ML-DSA, SLH-DSA per FIPS 203/204/205) or use hybrid cryptography combining classical and post-quantum algorithms. | | | ✓ |
+| **2.4.8** | Verify that quantum-resistant or hybrid cryptographic implementations use NIST-approved PQC algorithms and are validated against recognized security standards (e.g., FIPS 203, 204, 205). | | | ✓ |
 
 ## 参考情報
 詳細については、以下も参照してください。
@@ -67,4 +77,8 @@
 - OWASP Top 10 Privacy Countermeasures: <https://owasp.org/www-pdf-archive/OWASP_Top_10_Privacy_Countermeasures_v1.0.pdf>
 - NIST SP800-63B - Digital Identity Guidelines: <https://pages.nist.gov/800-63-3/sp800-63b.html>
 - FIPS 140-3 - Security Requrements for Cryptographic Modules: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.140-3.pdf
+- NIST FIPS 203 - Module-Lattice-Based Key-Encapsulation Mechanism (ML-KEM): <https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.203.pdf>
+- NIST FIPS 204 - Module-Lattice-Based Digital Signature Algorithm (ML-DSA): <https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.204.pdf>
+- NIST FIPS 205 - Stateless Hash-Based Digital Signature Algorithm (SLH-DSA): <https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.205.pdf>
+- NIST IR 8547 - Transition to Post-Quantum Cryptography Standards: <https://csrc.nist.gov/pubs/ir/8547/ipd>
 - ECRYPT CSA - D5.4 - Algorithms, Key Size and Protocols Report (2018): <https://www.ecrypt.eu.org/csa/documents/D5.4-FinalAlgKeySizeProt.pdf>
