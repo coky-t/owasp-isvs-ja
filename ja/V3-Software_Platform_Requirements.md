@@ -1,14 +1,20 @@
+---
+layout: default
+title: V3 - Software Platform Requirements
+nav_order: 6
+---
+
 # V3: ソフトウェアプラットフォーム要件
 
 ## 管理目標
 
-ブートローダーはデバイスのブートプロセス時に実行される最初のコードです。ファームウェアの製造元はブートローダーを正しく構成する責任があります。そうしないと、その脆弱性がデバイス全体のセキュリティを損ない、侵害やデバイスハイジャックにつながる可能性があります。この章のコントロールは、ロードされたコードの暗号署名を検証し、外部の場所からのイメージのロードを許可せず、ブート時のメモリ、シェル、その他のデバッグアクセスを禁止することにより、ブートの信頼性を確保します。
+ブートローダーはデバイスのブートプロセス時に実行される最初のコードです。ファームウェアの製造元はブートローダーを正しく構成する責任があります。そうしないと、その脆弱性がデバイス全体のセキュリティを損ない、侵害やデバイスハイジャックにつながる可能性があります。この章のコントロールは、ロードされたコードの暗号署名を検証し、外部の場所からのイメージのロードを許可せず、ブート時のメモリ、シェル、その他のデバッグアクセスを禁止することにより、ブートの信頼性を確保します。For Level 3 devices with operational lifetimes beyond 2030, secure boot implementations must support post-quantum digital signature algorithms to protect against future quantum threats that could compromise boot integrity.
 
 オペレーティングシステムとそのカーネルは特に、特権モードで実行され、多くのセキュリティプリミティブを含む重要なデバイス機能を実装するため、デバイスセキュリティの中心となります。これにはオペレーティングシステム、カーネル構成、および堅牢化のための最善のセキュリティプラクティスが必要です。
 
 Linux オペレーティングシステムは IoT で最も人気のあるものの一つです。名前空間と cgroup によりサポートされる分離メカニズムや、アクセス制御用の追加のカーネルセキュリティモジュールなど、一次セキュリティから多層防御まで多くの機能があります。コンテナ内で実行するサードパーティアプリケーションを構成および展開する場合は、これらの分離メカニズムを活用します。
 
-デバイスソフトウェアの更新と保守は製品のセキュリティにとって非常に重要です。アップデートシステムは設計と実装の一環としてセキュリティのベストプラクティスを採用する必要があり、デバイスが既知の脆弱性のない暗号署名されたソフトウェアのみを実行するようにします。パッチと脆弱性の管理プロセスでは、エンドユーザーを侵害から守るため、アップストリームセキュリティパッチが適用された新しいビルドを利用可能な最新バージョンとしてデプロイします。
+デバイスソフトウェアの更新と保守は製品のセキュリティにとって非常に重要です。アップデートシステムは設計と実装の一環としてセキュリティのベストプラクティスを採用する必要があり、デバイスが既知の脆弱性のない暗号署名されたソフトウェアのみを実行するようにします。パッチと脆弱性の管理プロセスでは、エンドユーザーを侵害から守るため、アップストリームセキュリティパッチが適用された新しいビルドを利用可能な最新バージョンとしてデプロイします。For Level 3 devices expected to operate beyond 2030, firmware update mechanisms must incorporate post-quantum or hybrid digital signatures to maintain long-term authenticity guarantees as quantum computing capabilities advance.
 
 ハードウェアセキュリティチップをソフトウェアプラットフォーム内にセキュアに構成および統合することで、デバイスは製造時にチップ内に書き込まれた暗号でアサートされた ID を使用できます。セキュリティチップには保存時に暗号化された鍵やシークレットを格納するための特権ストレージを提供する機能もあります。
 
@@ -26,6 +32,7 @@ Linux オペレーティングシステムは IoT で最も人気のあるもの
 | **3.1.6** | デバイス起動の一部としてブートローダーステージに機密情報 (コンソールに記録された秘密鍵やパスワードなど) が含まれていないことを検証します。 | | ✓ | ✓ |
 | **3.1.7** | ファームウェアが保存時に暗号化されたボリュームに保存されていることを検証します。 | | ✓ | ✓ |
 | **3.1.8** | ブート時にダイレクトメモリアクセス (Direct Memory Access, DMA) が不可能であることを検証します。たとえば、PCI 接続を介して DMA が不可能であることを確認します。 | | ✓ | ✓ |
+| **3.1.9** | Verify that secure boot cryptographic verification supports post-quantum digital signature algorithms (e.g., ML-DSA per FIPS 204, SLH-DSA per FIPS 205) or hybrid schemes for devices expected to operate beyond 2030. | | | ✓ |
 
 ### OS コンフィグレーション
 
@@ -49,9 +56,9 @@ Linux オペレーティングシステムは IoT で最も人気のあるもの
 | --  | ---------------------- | - | - | - |
 | **3.3.1** | Linux カーネル名前空間を使用してプロセスが分離されていることを検証します。 | | ✓ | ✓ |
 | **3.3.2** | コントロールグループ (cgroups) を使用して、重要なプロセスがリソースを制限するように構成されていることを検証します。 | | ✓ | ✓ |
-| **3.3.4** | Linux カーネル機能が昇格されたアクセスを必要とするプロセスについて最小限のセットで構成されていることを検証します。 | | ✓ | ✓ |
-| **3.3.5** | フィルタ付きセキュアコンピューティング (SECure COMPuting, seccomp BPF) が使用され、必要なシステムコールのみ許可するように構成されていることを検証します。 | | ✓ | ✓ |
-| **3.3.6** | SELinux, AppArmor, GRSEC などのカーネルセキュリティモジュールの使用を検証します。 | | | ✓ |
+| **3.3.3** | Linux カーネル機能が昇格されたアクセスを必要とするプロセスについて最小限のセットで構成されていることを検証します。 | | ✓ | ✓ |
+| **3.3.4** | フィルタ付きセキュアコンピューティング (SECure COMPuting, seccomp BPF) が使用され、必要なシステムコールのみ許可するように構成されていることを検証します。 | | ✓ | ✓ |
+| **3.3.5** | SELinux, AppArmor, GRSEC などのカーネルセキュリティモジュールの使用を検証します。 | | | ✓ |
 
 ### ソフトウェアアップデート
 
@@ -69,6 +76,7 @@ Linux オペレーティングシステムは IoT で最も人気のあるもの
 | **3.4.10** | アップデートをダウンロードする前にデバイスがアップデートサーバーコンポーネントについて認証していることを検証します。 | ✓ | ✓ | ✓ |
 | **3.4.11** | ファームウェアアップデートは暗号化されたサーバーサイドに保存されていることを検証します。 | | ✓ | ✓ |
 | **3.4.12** | ソフトウェアとファームウェアのアップデートが暗号化された通信チャネルを使用して送信されることを検証します。 | ✓ | ✓ | ✓ |
+| **3.4.13** | Verify that firmware update signing and verification mechanisms support post-quantum digital signatures (ML-DSA, SLH-DSA) or hybrid cryptographic schemes to ensure long-term authenticity for devices expected to operate beyond 2030. | | | ✓ |
 
 ### セキュリティチップ統合
 
@@ -89,7 +97,7 @@ Linux オペレーティングシステムは IoT で最も人気のあるもの
 ## 参考情報
 詳細については、以下も参照してください。
 
-- ENISA - Baseline Security Recommendations for IoT: <https://www.enisa.europa.eu/publications/baseline-security-recommendations-for-iot/at_download/fullReport>
+- ENISA - Baseline Security Recommendations for IoT: <https://www.enisa.europa.eu/publications/baseline-security-recommendations-for-iot>
 - CIS Benchmarks: <https://www.cisecurity.org/cis-benchmarks/>
 - SCAP: <https://csrc.nist.gov/projects/security-content-automation-protocol/scap-content>
 - TGC Guidance for Secure Update of Software and Firmware on Embedded Systems: <https://trustedcomputinggroup.org/wp-content/uploads/TCG-Secure-Update-of-SW-and-FW-on-Devices-v1r72_pub.pdf>
@@ -98,3 +106,6 @@ Linux オペレーティングシステムは IoT で最も人気のあるもの
 - OWASP Docker Top 10: <https://owasp.org/www-project-docker-top-10/>
 - Linux Containers Security (LXC): <https://linuxcontainers.org/lxc/security/>
 - Linux Containers Security (LXD): <https://linuxcontainers.org/lxd/docs/master/security>
+- NIST FIPS 204 - Module-Lattice-Based Digital Signature Algorithm (ML-DSA): <https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.204.pdf>
+- NIST FIPS 205 - Stateless Hash-Based Digital Signature Algorithm (SLH-DSA): <https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.205.pdf>
+- NIST IR 8547 - Transition to Post-Quantum Cryptography Standards: <https://csrc.nist.gov/pubs/ir/8547/ipd>
