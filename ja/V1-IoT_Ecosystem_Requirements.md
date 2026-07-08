@@ -18,9 +18,9 @@ nav_order: 4
 
 システム構成の変更にはセキュリティイベントの監査証跡を提供するために適切なログ記録および監視機能を採用する必要があります。イベントの詳細を示す属性は調査に役立ちますが、機密情報を含む過度に冗長なログはセキュリティリスクをもたらします。
 
-Incident response planning is essential for IoT ecosystems to effectively detect, respond to, and recover from security compromises. Organizations must establish processes for handling device credential compromises and provide mechanisms for users to validate the legitimacy of connected devices.
+IoT エコシステムにとって、セキュリティ侵害を効果的に検知、対応、復旧するには、インシデント対応計画が不可欠です。組織はデバイスクレデンシャルの侵害に対処するプロセスを確立するとともに、ユーザーが接続されたデバイスの正当性を検証するメカニズムを提供する必要があります。
 
-A defined and openly communicated support lifecycle is equally important. By establishing a minimum security update period, providing security patches free of charge, and notifying users ahead of end-of-life, manufacturers enable users to make informed risk decisions and avoid operating devices that no longer receive security maintenance.
+定義され、公に周知されたサポートライフサイクルが同様に重要です。セキュリティ更新の最低期間を定め、セキュリティパッチを無償で提供し、サポート終了を事前にユーザーに通知することで、製造業者はユーザーが十分な情報に基づくリスク判断を下せるようにし、セキュリティ保守を受けられなくなったデバイスの運用を回避します。
 
 ## セキュリティ検証要件
 
