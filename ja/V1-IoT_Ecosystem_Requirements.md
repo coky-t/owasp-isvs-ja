@@ -1,3 +1,9 @@
+---
+layout: default
+title: V1 - IoT Ecosystem Requirements
+nav_order: 4
+---
+
 # V1: IoT エコシステム要件
 
 ## 管理目標
@@ -11,6 +17,10 @@
 作成されたすべてのソフトウェアのセキュリティを確保するには、システムソフトウェアに対するビルドプロセスを、すべてのコンポーネントの完全性と真正性を検証するセキュアなビルド環境で実行する必要があります。コードは最善のセキュリティベストプラクティスを使用して記述し、利用可能な最善のセキュリティオプションを使用してコンパイルする必要があります。
 
 システム構成の変更にはセキュリティイベントの監査証跡を提供するために適切なログ記録および監視機能を採用する必要があります。イベントの詳細を示す属性は調査に役立ちますが、機密情報を含む過度に冗長なログはセキュリティリスクをもたらします。
+
+Incident response planning is essential for IoT ecosystems to effectively detect, respond to, and recover from security compromises. Organizations must establish processes for handling device credential compromises and provide mechanisms for users to validate the legitimacy of connected devices.
+
+A defined and openly communicated support lifecycle is equally important. By establishing a minimum security update period, providing security patches free of charge, and notifying users ahead of end-of-life, manufacturers enable users to make informed risk decisions and avoid operating devices that no longer receive security maintenance.
 
 ## セキュリティ検証要件
 
@@ -27,6 +37,7 @@
 
 
 ### サプライチェーン
+
 | # | 説明 | L1 | L2 | L3 |
 | -- | ---------------------- | - | - | - |
 | **1.2.1** | エコシステム内の各アプリケーション (ファームウェアを含む) がサードパーティコンポーネント、バージョン管理および公開された脆弱性をカタログ化するソフトウェア部品表 (SBOM) を保守していることを検証します。 | ✓ | ✓ | ✓ |
@@ -71,11 +82,28 @@
 | **1.4.6** | 収集されたログが組織のポリシーで必要とされる期間保存され、保存期間が終了すると安全に削除されることを検証します。 | | ✓ | ✓ |
 | **1.4.7** | 収集されたログの機密性、完全性、真正性が、ログを作成したデバイスとログを保存または処理する他のシステムの両方で適切に保護されていることを検証します。 | | ✓ | ✓ |
 
+### Incident Response
+
+| # | Description | L1 | L2 | L3 |
+| -- | ---------------------- | - | - | - |
+| **1.5.1** | Verify that an incident response plan is established that addresses potential security compromises of IoT devices, including procedures for identifying, containing, and recovering from security incidents. | | ✓ | ✓ |
+| **1.5.2** | Verify that an appropriate response strategy is in place for when device credentials (especially root keys or cryptographic material that cannot be remotely updated) are compromised. | | ✓ | ✓ |
+| **1.5.3** | Verify that users or administrators can obtain an overview of connected and paired devices to validate their legitimacy (e.g., by comparing identifiers such as MAC addresses or serial numbers). | | ✓ | ✓ |
+
+### End-of-Life and Update Support Policy
+
+| # | Description | L1 | L2 | L3 |
+| -- | ---------------------- | - | - | - |
+| **1.6.1** | Verify that the manufacturer has defined and publicly disclosed a minimum security update support period for the product, including the end date of that period, and that this information is communicated to users in plain language at or before the point of purchase. | ✓ | ✓ | ✓ |
+| **1.6.2** | Verify that users are notified when a product reaches the end of its security update support period, and that the notification states the date after which security updates will cease. Where technically feasible, this notification is provided in advance of that date and identifies any available migration paths or compensating controls. | ✓ | ✓ | ✓ |
+| **1.6.3** | Verify that security updates are provided to users at no additional cost throughout the declared support period. | ✓ | ✓ | ✓ |
+| **1.6.4** | Verify that security updates addressing critical and high-severity vulnerabilities can be delivered independently of feature or functional updates, so that users can apply security fixes without being required to accept unrelated changes. | | ✓ | ✓ |
+
 ## 参考情報
 詳細については、以下も参照してください。
 
 - OWASP ASVS: <https://owasp.org/www-project-application-security-verification-standard/>
-- OWASP MASVS: <https://owasp.org/www-project-mobile-security-testing-guide/>
+- OWASP MASVS: <https://owasp.org/mas>
 - OWASP Threat Modeling: <https://owasp.org/www-community/Application_Threat_Modeling>
 - OWASP SCVS: <https://owasp.org/www-project-software-component-verification-standard/>
 - OWASP Software Assurance Maturity Model: <https://owaspsamm.org/>
@@ -85,3 +113,6 @@
 - OWASP Embedded Application Security: <https://owasp.org/www-project-embedded-application-security/>
 - Banned C Functions (Safe Strings library): <https://github.com/intel/safestringlib/wiki/SDL-List-of-Banned-Functions>
 - NIST Draft NISTIR 8259D: <https://nvlpubs.nist.gov/nistpubs/ir/2020/NIST.IR.8259D-draft.pdf>
+- EU Cyber Resilience Act (Regulation (EU) 2024/2847), Article 13: <https://eur-lex.europa.eu/eli/reg/2024/2847/oj>
+- UK Product Security and Telecommunications Infrastructure (PSTI) Act 2022: <https://www.legislation.gov.uk/ukpga/2022/46>
+- ETSI EN 303 645 (Cyber Security for Consumer IoT): <https://www.etsi.org/deliver/etsi_en/303600_303699/303645/03.01.03_60/en_303645v030103p.pdf>
