@@ -1,3 +1,9 @@
+---
+layout: default
+title: V5 - Hardware Platform Requirements
+nav_order: 8
+---
+
 # V5: ハードウェアプラットフォーム要件
 
 ## 管理目標
@@ -6,7 +12,7 @@
 
 この章に記されているコントロールの目的は、ハードウェアがセキュアな構成に使用できる限り、可能な限り最もセキュアな方法で構成されることを確保することです。これにはデバッグインタフェースの無効化または保護、改竄に対抗するための既存のすべてのアラームとセンサーメカニズムの設定、OTP フューズなどのアンチクローニングハードウェア保護の使用、セキュアなプロセス分離のための MMU (メモリ管理ユニット) の使用が含まれます。
 
-この章ではセキュアな構成を保証し、耐性を強化するために階層化されたコントロールを提供するハードウェアプラットフォームに対する要件について説明します。たとえば、3.1.4 ではセキュアブートを正しく構成する方法について説明しています。5.1.2 ではこれをサポートするプラットフォームが必要です。5.1.1 ではプラットフォームがデバッグインタフェースの無効化をサポートしている必要があり、1.2.4 では出荷時にこれを適用する必要があります。5.1.8 では MMU プラットフォームサポートが必要であり、3.2.8 ではメモリ保護の設定と適用が必要です。
+この章ではセキュアな構成を保証し、耐性を強化するために階層化されたコントロールを提供するハードウェアプラットフォームに対する要件について説明します。たとえば、3.1.4 ではセキュアブートを正しく構成する方法について説明しています。5.1.2 ではこれをサポートするプラットフォームが必要です。5.1.1 ではプラットフォームがデバッグインタフェースの無効化をサポートしている必要があり、1.2.4 では出荷時にこれを適用する必要があります。5.1.8 では MMU プラットフォームサポートが必要であり、3.2.8 ではメモリ保護の設定と適用が必要です。 For Level 3 devices with operational lifetimes beyond 2030, hardware platforms must support post-quantum cryptographic algorithms through dedicated accelerators or provide sufficient performance for software-based implementations to ensure quantum-resistant security operations.
 
 ## セキュリティ検証要件
 
@@ -26,13 +32,18 @@
 | **5.1.10** | 説明的なシルクスクリーンが PCB から除去されていることを検証します。 | | | ✓ |
 | **5.1.11** | デバッグパスとトレースが製品 PCB から取り外されていることを検証します。 | | | ✓ |
 | **5.1.12** | FPGA ビットストリームが強力でセキュアなアルゴリズムを使用して暗号化されていることを検証します。 | | | ✓ |
+| **5.1.13** | Verify that cryptographic accelerators support post-quantum algorithms (ML-KEM, ML-DSA, SLH-DSA) or provide sufficient performance for software-based PQC implementations on resource-constrained devices expected to operate beyond 2030. | | | ✓ |
 
 ## 参考情報
 詳細については、以下も参照してください。
 
 - Common Weakness Enumeration (CWE) Hardware Design: <https://cwe.mitre.org/data/definitions/1194.html>
 - IoT Security - Physical and Hardware Security: <https://www.embedded.com/iot-security-physical-and-hardware-security/>
-- IETF RFC 8576 - IoT Security: State of the Art and Challenges (5.10 Reverse Engineering Considerations): <https://tools.ietf.org/html/rfc8576>
-- ENISA - Baseline Security Recommendations for IoT: <https://www.enisa.europa.eu/publications/baseline-security-recommendations-for-iot/at_download/fullReport>
+- IETF RFC 8576 - IoT Security: State of the Art and Challenges (5.10 Reverse Engineering Considerations): <https://datatracker.ietf.org/doc/html/rfc8576>
+- ENISA - Baseline Security Recommendations for IoT: <https://www.enisa.europa.eu/publications/baseline-security-recommendations-for-iot>
 - GSMA - IoT Security Guidelines for Endpoint Systems: <https://www.gsma.com/iot/wp-content/uploads/2017/10/CLP.13-v2.0.pdf>
 - NSA Hardware and Firmware Security Guidance: <https://github.com/nsacyber/Hardware-and-Firmware-Security-Guidance>
+- NIST FIPS 203 - Module-Lattice-Based Key-Encapsulation Mechanism (ML-KEM): <https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.203.pdf>
+- NIST FIPS 204 - Module-Lattice-Based Digital Signature Algorithm (ML-DSA): <https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.204.pdf>
+- NIST FIPS 205 - Stateless Hash-Based Digital Signature Algorithm (SLH-DSA): <https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.205.pdf>
+- NIST SP 800-232 - Ascon-Based Lightweight Cryptography Standards for Constrained Devices: <https://csrc.nist.gov/pubs/sp/800/232/final>
