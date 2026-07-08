@@ -1,3 +1,9 @@
+---
+layout: default
+title: V4 - Communication Requirements
+nav_order: 7
+---
+
 # V4: 通信要件
 
 ## 管理目標
@@ -7,6 +13,10 @@
 - 送信されるデータの機密性に関係なく、常に TLS または同等の強力な暗号化と認証を使用します。
 - その他のセキュリティプラクティスにはピンニングと相互認証を備える証明書ベースの認証が含まれます。
 - 最新の構成を使用して、通信に使用されるアルゴリズムと暗号の優先順序を有効にして設定します。
+
+For Level 3 devices requiring the highest security posture, modern wireless protocols with advanced security features are mandated. Bluetooth 5.3+ provides critical protections including encryption key size enforcement (preventing KNOB attacks), enhanced channel security, and support for encrypted advertising data (Bluetooth 5.4+). These features defend against contemporary attack vectors including man-in-the-middle attacks, passive eavesdropping, key negotiation vulnerabilities, and interference-based attacks in hostile RF environments.
+
+For Level 3 devices with operational lifetimes extending beyond 2030, communication security must address quantum computing threats through post-quantum cryptography. TLS implementations should support quantum-resistant key exchange (ML-KEM) and digital signatures (ML-DSA, SLH-DSA), or use hybrid approaches combining classical and post-quantum algorithms. This aligns with NIST's quantum-safe migration timeline and ensures long-term confidentiality and authenticity protection.
 - 非推奨または既知のセキュアではないアルゴリズムと暗号を無効にします。
 - 有線および無線通信プロトコルで利用可能な最も強力なセキュリティ設定を使用します。
 
@@ -20,8 +30,10 @@
 | **4.1.2** | 最新の TLS テストツールを使用して、強い暗号スイートのみが有効であり、最も強い暗号スイートが優先として設定されていることを検証します。 | ✓ | ✓ | ✓ |
 | **4.1.3** | TLS を使用する場合は、デバイスが X.509 証明書を暗号学的に検証することを検証します。 | ✓ | ✓ | ✓ |
 | **4.1.4** | 可用性が重要なアプリケーションについて、妨害からの保護または検出が提供されていることを検証します。 | | ✓ | ✓ |
-| **4.1.6** | デバイスの TLS 実装が独自の証明書ストアを使用し、エンドポイントの証明書または公開鍵にピン留めし、信頼できる CA により署名されている場合でも異なる証明書または鍵を持つエンドポイントへの接続を許可しないことを検証します。 | | ✓ | ✓ |
-| **4.1.7** | チップ間通信が暗号化されていることを検証します。 (メインボードからドーターボードへの通信など) | | | ✓ |
+| **4.1.5** | デバイスの TLS 実装が独自の証明書ストアを使用し、エンドポイントの証明書または公開鍵にピン留めし、信頼できる CA により署名されている場合でも異なる証明書または鍵を持つエンドポイントへの接続を許可しないことを検証します。 | | ✓ | ✓ |
+| **4.1.6** | チップ間通信が暗号化されていることを検証します。 (メインボードからドーターボードへの通信など) | | | ✓ |
+| **4.1.7** | Verify that TLS implementations for devices expected to operate beyond 2030 support post-quantum key exchange mechanisms (e.g., ML-KEM per FIPS 203) or hybrid key exchange combining classical ECDH with PQC algorithms. | | | ✓ |
+| **4.1.8** | Verify that X.509 certificates used for authentication support post-quantum signature algorithms (ML-DSA, SLH-DSA) or hybrid certificate chains for quantum resistance in devices expected to operate beyond 2030. | | | ✓ |
 
 ### マシン間
 
@@ -41,7 +53,10 @@
 | **4.3.4** | 最新バージョンの Bluetooth の場合、"Just Works" を除くすべてのバージョンで Secure Simple Pairing (SSP) 認証に少なくとも 6 桁が必要であることを検証します。 | ✓ | ✓ | ✓ |
 | **4.3.5** | 暗号化鍵がデバイスがサポートする最大サイズであり、このサイズが Bluetooth 接続を介して送信される情報を適切に保護するのに十分であるを検証します。 | ✓ | ✓ | ✓ |
 | **4.3.6** | 利用可能な最も安全な Bluetooth ペアリング手法が使用されていることを検証します。通信デバイスの機能に応じて Out Of Band (OOB), Numeric Comparison, Passkey Entry ペアリング手法が使用されていることを検証します。 | ✓ | ✓ | ✓ |
-| **4.3.7** | デバイスでサポートされている最強の Bluetooth セキュリティモードとレベルが使用されていることを検証します。たとえば、Bluetooth 4.1 デバイスの場合、セキュリティモード 4、レベル 4 を使用して、認証されたペアリングと暗号化を提供する必要があります。 | ✓ | ✓ | ✓ |
+| **4.3.7** | Verify that Bluetooth 4.2 or higher with LE Secure Connections is used. For Bluetooth Classic (BR/EDR), Security Mode 4, Level 4 must be used at minimum. Devices using Bluetooth 4.1 or earlier should be avoided for new deployments. | ✓ | ✓ | |
+| **4.3.8** | Verify that Bluetooth 5.3 or higher is used with LE Secure Connections. The device must enforce a minimum encryption key size of 128 bits using the Set Min Encryption Key Size HCI command and reject connections with weaker key negotiation attempts. | | | ✓ |
+| **4.3.9** | Verify that Encrypted Advertising Data (EAD) is enabled for broadcast communications where supported (Bluetooth 5.4+) to prevent pre-connection eavesdropping attacks. For devices using Bluetooth 5.3, advertising data containing sensitive information must not be transmitted. | | | ✓ |
+| **4.3.10** | Verify that adaptive frequency hopping and channel classification are enabled to mitigate interference-based attacks and improve connection reliability in hostile RF environments. The device must monitor channel quality and avoid compromised channels. | | | ✓ |
 
 ### Wi-Fi
 
@@ -51,6 +66,7 @@
 | **4.4.2** | Wi-Fi 通信を保護するために WPA2 以降が使用されていることを検証します。 | ✓ | ✓ | ✓ |
 | **4.4.3** | WPA が使用されている場合は、AES 暗号化 (CCMP モード) で使用されていることを検証します。 | ✓ | ✓ | ✓ |
 | **4.4.4** | Wi-Fi Protected Setup (WPS) がデバイス間の Wi-Fi 接続を確立するために使用されていないことを検証します。 | ✓ | ✓ | ✓ |
+| **4.4.5** | Verify that WPA3 is used for Wi-Fi communications on devices that require the highest level of security. | | | ✓ |
 
 ### Zigbee 
 
@@ -78,10 +94,30 @@
 ## 参考情報
 詳細については、以下も参照してください。
 
+### General Communication Security
 - OWASP Transport Layer Protection Cheat Sheet: <https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html>
-- NIST SP800-52r2 - Guidelines for the Selection, Configuration, and Use of TLS Implementations: <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r2.pdf>
-- IETF RFC 7525 - Recommendations for Secure Use of TLS and DTLS: <https://tools.ietf.org/html/rfc7525>
+- NIST SP800-52r2 - Guidelines for the Selection, Configuration, and Use of TLS Implementations: <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-121r2.pdf>
+- IETF RFC 7525 - Recommendations for Secure Use of TLS and DTLS: <https://datatracker.ietf.org/doc/html/rfc7525>
+- NIST FIPS 203 - Module-Lattice-Based Key-Encapsulation Mechanism (ML-KEM): <https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.203.pdf>
+- NIST FIPS 204 - Module-Lattice-Based Digital Signature Algorithm (ML-DSA): <https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.204.pdf>
+- NIST FIPS 205 - Stateless Hash-Based Digital Signature Algorithm (SLH-DSA): <https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.205.pdf>
+- IETF Draft - Post-Quantum Cryptography Recommendations for TLS: <https://www.ietf.org/archive/id/draft-reddy-uta-pqc-app-07.html>
+- GSMA PQ.04 - Post-Quantum Cryptography in IoT Ecosystem: <https://www.gsma.com/solutions-and-impact/technologies/security/wp-content/uploads/2025/02/PQ.04-Post-Quantum-Cryptography-in-IoT-Ecosystem-v1.0.pdf>
+
+### Bluetooth Security
 - NIST SP800-121r2 - Guide to Bluetooth Security: <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-121r2.pdf>
+- Bluetooth SIG - LE Security Study Guide: <https://www.bluetooth.com/learn-about-bluetooth/key-attributes/bluetooth-security/>
+- Bluetooth SIG - Security & Privacy Best Practices: <https://www.bluetooth.com/learn-about-bluetooth/key-attributes/bluetooth-security/>
+- CVE-2023-24023 - BLUFFS Attack (Bluetooth Forward/Future Secrecy): <https://francozappa.github.io/about-bluffs/>
+- CVE-2020-26558 - Bluetooth Passkey Entry Vulnerability: <https://www.kb.cert.org/vuls/id/799380>
+
+### Wi-Fi Security
 - NIST SP800-97 - Establishing Wireless Robust Security Networks: <https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-97.pdf>
+
+### IoT-Specific Wireless Protocols
 - HKCERT - ZigBee Security Study: <https://www.hkcert.org/f/blog/264453/3a1c8eed-012c-4b59-9d9e-971001d66c77-DLFE-14602.pdf>
-- A systematic review of security in LoRaWAN: <https://arxiv.org/pdf/2105.00384.pdf> 
+- A systematic review of security in LoRaWAN: <https://arxiv.org/pdf/2105.00384.pdf>
+
+### Industrial IoT Standards
+- IEC 62443-1-6 - Security for industrial automation and control systems: Application of IEC 62443 for Industrial Internet of Things
+- IEC 62443-4-2 - Technical security requirements for IACS components 
