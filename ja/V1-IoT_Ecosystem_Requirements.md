@@ -82,13 +82,13 @@ IoT エコシステムにとって、セキュリティ侵害を効果的に検�
 | **1.4.6** | 収集されたログが組織のポリシーで必要とされる期間保存され、保存期間が終了すると安全に削除されることを検証します。 | | ✓ | ✓ |
 | **1.4.7** | 収集されたログの機密性、完全性、真正性が、ログを作成したデバイスとログを保存または処理する他のシステムの両方で適切に保護されていることを検証します。 | | ✓ | ✓ |
 
-### Incident Response
+### インシデント対応
 
-| # | Description | L1 | L2 | L3 |
+| # | 説明 | L1 | L2 | L3 |
 | -- | ---------------------- | - | - | - |
-| **1.5.1** | Verify that an incident response plan is established that addresses potential security compromises of IoT devices, including procedures for identifying, containing, and recovering from security incidents. | | ✓ | ✓ |
-| **1.5.2** | Verify that an appropriate response strategy is in place for when device credentials (especially root keys or cryptographic material that cannot be remotely updated) are compromised. | | ✓ | ✓ |
-| **1.5.3** | Verify that users or administrators can obtain an overview of connected and paired devices to validate their legitimacy (e.g., by comparing identifiers such as MAC addresses or serial numbers). | | ✓ | ✓ |
+| **1.5.1** | IoT デバイスの潜在的なセキュリティ侵害に対処するインシデント対応計画が策定されていることを検証します。セキュリティインシデントの特定、封じ込め、復旧のための手順を含みます。 | | ✓ | ✓ |
+| **1.5.2** | デバイスクレデンシャル (特にルートキーや、遠隔更新ができない暗号マテリアル) が侵害された場合に備えて、適切な対応戦略が講じられていることを検証します。 | | ✓ | ✓ |
+| **1.5.3** | ユーザーや管理者が、接続済みデバイスやペアリング済みデバイスの概要を獲得し、それらの正当性を確認できること (例: MAC アドレスやシリアル番号などの識別子を照合することによって) を検証します。 | | ✓ | ✓ |
 
 ### End-of-Life and Update Support Policy
 
