@@ -90,14 +90,14 @@ IoT エコシステムにとって、セキュリティ侵害を効果的に検�
 | **1.5.2** | デバイスクレデンシャル (特にルートキーや、遠隔更新ができない暗号マテリアル) が侵害された場合に備えて、適切な対応戦略が講じられていることを検証します。 | | ✓ | ✓ |
 | **1.5.3** | ユーザーや管理者が、接続済みデバイスやペアリング済みデバイスの概要を獲得し、それらの正当性を確認できること (例: MAC アドレスやシリアル番号などの識別子を照合することによって) を検証します。 | | ✓ | ✓ |
 
-### End-of-Life and Update Support Policy
+### 使用期限と更新サポートのポリシー
 
-| # | Description | L1 | L2 | L3 |
+| # | 説明 | L1 | L2 | L3 |
 | -- | ---------------------- | - | - | - |
-| **1.6.1** | Verify that the manufacturer has defined and publicly disclosed a minimum security update support period for the product, including the end date of that period, and that this information is communicated to users in plain language at or before the point of purchase. | ✓ | ✓ | ✓ |
-| **1.6.2** | Verify that users are notified when a product reaches the end of its security update support period, and that the notification states the date after which security updates will cease. Where technically feasible, this notification is provided in advance of that date and identifies any available migration paths or compensating controls. | ✓ | ✓ | ✓ |
-| **1.6.3** | Verify that security updates are provided to users at no additional cost throughout the declared support period. | ✓ | ✓ | ✓ |
-| **1.6.4** | Verify that security updates addressing critical and high-severity vulnerabilities can be delivered independently of feature or functional updates, so that users can apply security fixes without being required to accept unrelated changes. | | ✓ | ✓ |
+| **1.6.1** | 製造業者は製品のセキュリティ更新の最小サポート期限 (その期間の終了日を含む) を定義して公表していること、およびこの情報が購入時またはそれ以前に平易な言葉でユーザーに伝達されていることを検証します。 | ✓ | ✓ | ✓ |
+| **1.6.2** | 製品がそのセキュリティ更新サポート期限に到達する際、ユーザーに通知されていること、およびその通知にはセキュリティ更新が終了する日付を明示していることを検証します。技術的に可能な場合、この通知はその日付より前に提供され、利用可能な移行手順や代替策を示します。 | ✓ | ✓ | ✓ |
+| **1.6.3** | 公表されたサポート期間中、セキュリティ更新が追加費用なしでユーザーに提供されることを検証します。 | ✓ | ✓ | ✓ |
+| **1.6.4** | 緊急 (critical) および高 (high) の重大度の脆弱性に対処するセキュリティ更新が機能更新とは独立して配布可能であり、その結果ユーザーは無関係の変更を受け入れる必要なくセキュリティ修正を適用できることを検証します。 | | ✓ | ✓ |
 
 ## 参考情報
 詳細については、以下も参照してください。
