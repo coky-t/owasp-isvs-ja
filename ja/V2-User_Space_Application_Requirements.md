@@ -14,7 +14,7 @@ nav_order: 5
 
 データやコードを含むファイルやメモリの内容などのシステムリソースをセキュアに使用するには、資格情報を含む機密データの保護と個人情報の公正な取り扱いが必要です。
 
-この章の多くのコントロールは暗号化を通じて実装されます。したがって適切な暗号化プリミティブを選択し、セキュアな資格情報ストレージで構成するためには追加のコントロールが必要です。For Level 3 devices with operational lifetimes extending beyond 2030, cryptographic implementations must address the emerging threat of quantum computing through post-quantum cryptography (PQC) or hybrid cryptographic approaches combining classical and quantum-resistant algorithms. This ensures long-term confidentiality and authenticity protection aligned with NIST's timeline for quantum-safe cryptography migration (deprecation by 2030, full transition by 2035).
+この章の多くのコントロールは暗号化を通じて実装されます。したがって適切な暗号化プリミティブを選択し、セキュアな資格情報ストレージで構成するためには追加のコントロールが必要です。2030 年を超えて延長している運用期限を持つレベル 3 デバイスに対して、暗号実装は、耐量子暗号 (PQC) や、従来のアルゴリズムと量子耐性アルゴリズムを組み合わせたハイブリッド暗号アプローチを通じて、量子コンピューティングの新たな脅威に対処しなければなりません。これは、量子安全暗号への移行についての NIST のタイムライン (2030 年までに廃止、2035 年までに完全移行) に準拠した、長期的な機密性と真正性の保護を確保します。
 
 ## セキュリティ検証要件
 
