@@ -32,7 +32,7 @@ Linux オペレーティングシステムは IoT で最も人気のあるもの
 | **3.1.6** | デバイス起動の一部としてブートローダーステージに機密情報 (コンソールに記録された秘密鍵やパスワードなど) が含まれていないことを検証します。 | | ✓ | ✓ |
 | **3.1.7** | ファームウェアが保存時に暗号化されたボリュームに保存されていることを検証します。 | | ✓ | ✓ |
 | **3.1.8** | ブート時にダイレクトメモリアクセス (Direct Memory Access, DMA) が不可能であることを検証します。たとえば、PCI 接続を介して DMA が不可能であることを確認します。 | | ✓ | ✓ |
-| **3.1.9** | Verify that secure boot cryptographic verification supports post-quantum digital signature algorithms (e.g., ML-DSA per FIPS 204, SLH-DSA per FIPS 205) or hybrid schemes for devices expected to operate beyond 2030. | | | ✓ |
+| **3.1.9** | 2030 年を超えて運用することを予定しているデバイスにおいて、セキュアブートの暗号論的検証が耐量子デジタル署名アルゴリズム (FIPS 204 の ML-DSA, FIPS 205 の SLH-DSA など) またはハイブリッド方式をサポートしていることを検証します。 | | | ✓ |
 
 ### OS コンフィグレーション
 
