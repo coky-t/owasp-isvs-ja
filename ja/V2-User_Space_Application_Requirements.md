@@ -33,8 +33,8 @@ nav_order: 5
 | **2.1.9** | ユーザー、デバイス、またはサービスの認証資格情報がファームウェアまたはエコシステムアプリケーションにハードコードされていないことを検証します。 | ✓ | ✓ | ✓ |
 | **2.1.10** | デバイス認証用にプロビジョニングされた資格情報がデバイスごとに一意であることを検証します。 | ✓ | ✓ | ✓ |
 | **2.1.11** | 認証スキームが危殆化したデバイスや廃止されたデバイスの資格情報を失効するように設計されていることを検証します。 | | | ✓ |
-| **2.1.12** | Verify that authentication mechanisms have sufficient protection against brute force attacks (e.g., account lockout, rate limiting, or exponential backoff). | ✓ | ✓ | ✓ |
-| **2.1.13** | Verify that reauthentication of users and devices is required at regular intervals appropriate to the security criticality of the application or functionality. | | ✓ | ✓ |
+| **2.1.12** | 認証メカニズムがブルートフォース攻撃に対して十分な保護 (アカウントロックアウト、レート制限、指数的バックオフなど) を備えていることを検証します。 | ✓ | ✓ | ✓ |
+| **2.1.13** | アプリケーションや機能のセキュリティ上の重要度に応じた定期的な間隔で、ユーザーとデバイスの再認証が求められることを検証します。 | | ✓ | ✓ |
 
 ### 認可
 
