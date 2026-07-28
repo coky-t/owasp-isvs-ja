@@ -66,8 +66,8 @@ nav_order: 5
 | **2.4.4** | 専用のセキュリティチップが提供する機能を利用して、デバイスで使用される暗号化シークレットが安全に保存されていることを検証します。 | | ✓ | ✓ |
 | **2.4.5** | デバイスで使用される暗号化プリミティブが専用のセキュリティチップにより提供されていることを検証します。 | | ✓ | ✓ |
 | **2.4.6** | 使用されている暗号化ライブラリが認知されている暗号化セキュリティ標準に準拠していることが認証されていることを検証します。 | | ✓ | ✓ |
-| **2.4.7** | Verify that for devices with expected operational lifetime beyond 2030, cryptographic implementations support migration to post-quantum algorithms (ML-KEM, ML-DSA, SLH-DSA per FIPS 203/204/205) or use hybrid cryptography combining classical and post-quantum algorithms. | | | ✓ |
-| **2.4.8** | Verify that quantum-resistant or hybrid cryptographic implementations use NIST-approved PQC algorithms and are validated against recognized security standards (e.g., FIPS 203, 204, 205). | | | ✓ |
+| **2.4.7** | 2030 年を超えた運用期間を予定しているデバイスについて、暗号実装が耐量子アルゴリズム (FIPS 203/204/205 の ML-KEM, ML-DSA, SLH-DSA) への移行をサポートしている、または従来のものと耐量子アルゴリズムを組み合わせたハイブリッド暗号を使用していることを検証します。 | | | ✓ |
+| **2.4.8** | 耐量子またはハイブリッド暗号実装が NIST 承認の PQC アルゴリズムを使用しており、認められたセキュリティ規格 (FIPS 203, 204, 205 など) に照らして確認されていることを検証します。 | | | ✓ |
 
 ## 参考情報
 詳細については、以下も参照してください。
