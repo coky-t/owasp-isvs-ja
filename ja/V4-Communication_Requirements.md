@@ -14,7 +14,7 @@ nav_order: 7
 - その他のセキュリティプラクティスにはピンニングと相互認証を備える証明書ベースの認証が含まれます。
 - 最新の構成を使用して、通信に使用されるアルゴリズムと暗号の優先順序を有効にして設定します。
 
-最高のセキュリティ態勢を要求するレベル 3 デバイスには、高度なセキュリティ機能を備えた最新の無線プロトコルが義務付けられています。Bluetooth 5.3 以降では、暗号鍵サイズの強制 (KNOB 攻撃の防止)、チャネルセキュリティの強化、暗号化されたアドバタイジングデータのサポート (Bluetooth 5.4 以降) といった重要な保護を提供します。これらの機能は、中間者攻撃、受動的な盗聴、キーネゴシエーションの脆弱性、厳しい RF 環境での干渉ベースの攻撃など、現代の攻撃ベクトルに対して防御します。
+最高のセキュリティ態勢を要求するレベル 3 デバイスには、高度なセキュリティ機能を備えた最新の無線プロトコルが義務付けられています。Bluetooth 5.3 以降では、暗号鍵サイズの強制 (KNOB 攻撃の防止)、チャネルセキュリティの強化、暗号化アドバタイジングデータのサポート (Bluetooth 5.4 以降) といった重要な保護を提供します。これらの機能は、中間者攻撃、受動的な盗聴、キーネゴシエーションの脆弱性、厳しい RF 環境での干渉ベースの攻撃など、現代の攻撃ベクトルに対して防御します。
 
 2030 年を超えて延長している運用期限を持つレベル 3 デバイスに対して、通信セキュリティは耐量子暗号を通じて量子コンピューティングの脅威に対処する必要があります。TLS 実装は耐量子の鍵交換 (ML-KEM) およびデジタル署名 (ML-DSA, SLH-DSA) をサポートするか、あるいは従来と耐量子のアルゴリズムを組み合わせたハイブリッドアプローチを使用すべきです。これは NIST の量子安全移行タイムラインに沿っており、長期的な機密性と真正性の保護を確保します。
 - 非推奨または既知のセキュアではないアルゴリズムと暗号を無効にします。
@@ -53,10 +53,10 @@ nav_order: 7
 | **4.3.4** | 最新バージョンの Bluetooth の場合、"Just Works" を除くすべてのバージョンで Secure Simple Pairing (SSP) 認証に少なくとも 6 桁が必要であることを検証します。 | ✓ | ✓ | ✓ |
 | **4.3.5** | 暗号化鍵がデバイスがサポートする最大サイズであり、このサイズが Bluetooth 接続を介して送信される情報を適切に保護するのに十分であるを検証します。 | ✓ | ✓ | ✓ |
 | **4.3.6** | 利用可能な最も安全な Bluetooth ペアリング手法が使用されていることを検証します。通信デバイスの機能に応じて Out Of Band (OOB), Numeric Comparison, Passkey Entry ペアリング手法が使用されていることを検証します。 | ✓ | ✓ | ✓ |
-| **4.3.7** | Verify that Bluetooth 4.2 or higher with LE Secure Connections is used. For Bluetooth Classic (BR/EDR), Security Mode 4, Level 4 must be used at minimum. Devices using Bluetooth 4.1 or earlier should be avoided for new deployments. | ✓ | ✓ | |
-| **4.3.8** | Verify that Bluetooth 5.3 or higher is used with LE Secure Connections. The device must enforce a minimum encryption key size of 128 bits using the Set Min Encryption Key Size HCI command and reject connections with weaker key negotiation attempts. | | | ✓ |
-| **4.3.9** | Verify that Encrypted Advertising Data (EAD) is enabled for broadcast communications where supported (Bluetooth 5.4+) to prevent pre-connection eavesdropping attacks. For devices using Bluetooth 5.3, advertising data containing sensitive information must not be transmitted. | | | ✓ |
-| **4.3.10** | Verify that adaptive frequency hopping and channel classification are enabled to mitigate interference-based attacks and improve connection reliability in hostile RF environments. The device must monitor channel quality and avoid compromised channels. | | | ✓ |
+| **4.3.7** | LE Secure Connections を備えた Bluetooth 4.2 以降が使用されていることを検証します。Bluetooth Classic (BR/EDR) では、最低でもセキュリティモード 4、レベル 4 が使用されている必要があります。新規導入においては Bluetooth 4.1 以前を使用するデバイスを避けるべきです。 | ✓ | ✓ | |
+| **4.3.8** | LE Secure Connections を備えた Bluetooth 5.3 以降が使用されていることを検証します。デバイスは Set Min Encryption Key Size の HCI コマンドを使用して最小暗号鍵サイズを 128 ビットに強制し、より弱いキーでのネゴシエーション試行での接続を拒否する必要があります。 | | | ✓ |
+| **4.3.9** | 接続前盗聴攻撃を防ぐために、サポートされている場合 (Bluetooth 5.4 以降)、ブロードキャスト通信において暗号化アドバタイジングデータ (EAD) が有効化されていることを検証します。Bluetooth 5.3 を使用するデバイスでは、機密情報を含むアドバタイジングデータを送信してはいけません。 | | | ✓ |
+| **4.3.10** | 厳しい RF 環境で、干渉ベースの攻撃を緩和し、接続の信頼性を向上するために、適応性周波数ホッピングとチャネル分類が有効化されていることを検証します。デバイスはチャネル品質を監視し、侵害されたチャネルを回避する必要があります。 | | | ✓ |
 
 ### Wi-Fi
 
