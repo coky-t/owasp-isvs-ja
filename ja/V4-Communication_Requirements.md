@@ -66,7 +66,7 @@ nav_order: 7
 | **4.4.2** | Wi-Fi 通信を保護するために WPA2 以降が使用されていることを検証します。 | ✓ | ✓ | ✓ |
 | **4.4.3** | WPA が使用されている場合は、AES 暗号化 (CCMP モード) で使用されていることを検証します。 | ✓ | ✓ | ✓ |
 | **4.4.4** | Wi-Fi Protected Setup (WPS) がデバイス間の Wi-Fi 接続を確立するために使用されていないことを検証します。 | ✓ | ✓ | ✓ |
-| **4.4.5** | Verify that WPA3 is used for Wi-Fi communications on devices that require the highest level of security. | | | ✓ |
+| **4.4.5** | 最高レベルのセキュリティを要求するデバイスでは Wi-Fi 通信に WPA3 が使用されていることを検証します。 | | | ✓ |
 
 ### Zigbee 
 
@@ -94,7 +94,7 @@ nav_order: 7
 ## 参考情報
 詳細については、以下も参照してください。
 
-### General Communication Security
+### 一般的な通信セキュリティ
 - OWASP Transport Layer Protection Cheat Sheet: <https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html>
 - NIST SP800-52r2 - Guidelines for the Selection, Configuration, and Use of TLS Implementations: <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-121r2.pdf>
 - IETF RFC 7525 - Recommendations for Secure Use of TLS and DTLS: <https://datatracker.ietf.org/doc/html/rfc7525>
@@ -104,20 +104,20 @@ nav_order: 7
 - IETF Draft - Post-Quantum Cryptography Recommendations for TLS: <https://www.ietf.org/archive/id/draft-reddy-uta-pqc-app-07.html>
 - GSMA PQ.04 - Post-Quantum Cryptography in IoT Ecosystem: <https://www.gsma.com/solutions-and-impact/technologies/security/wp-content/uploads/2025/02/PQ.04-Post-Quantum-Cryptography-in-IoT-Ecosystem-v1.0.pdf>
 
-### Bluetooth Security
+### Bluetooth セキュリティ
 - NIST SP800-121r2 - Guide to Bluetooth Security: <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-121r2.pdf>
 - Bluetooth SIG - LE Security Study Guide: <https://www.bluetooth.com/learn-about-bluetooth/key-attributes/bluetooth-security/>
 - Bluetooth SIG - Security & Privacy Best Practices: <https://www.bluetooth.com/learn-about-bluetooth/key-attributes/bluetooth-security/>
 - CVE-2023-24023 - BLUFFS Attack (Bluetooth Forward/Future Secrecy): <https://francozappa.github.io/about-bluffs/>
 - CVE-2020-26558 - Bluetooth Passkey Entry Vulnerability: <https://www.kb.cert.org/vuls/id/799380>
 
-### Wi-Fi Security
+### Wi-Fi セキュリティ
 - NIST SP800-97 - Establishing Wireless Robust Security Networks: <https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-97.pdf>
 
-### IoT-Specific Wireless Protocols
+### IoT 特有の無線プロトコル
 - HKCERT - ZigBee Security Study: <https://www.hkcert.org/f/blog/264453/3a1c8eed-012c-4b59-9d9e-971001d66c77-DLFE-14602.pdf>
 - A systematic review of security in LoRaWAN: <https://arxiv.org/pdf/2105.00384.pdf>
 
-### Industrial IoT Standards
+### 産業用 IoT 規格
 - IEC 62443-1-6 - Security for industrial automation and control systems: Application of IEC 62443 for Industrial Internet of Things
 - IEC 62443-4-2 - Technical security requirements for IACS components 
