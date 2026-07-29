@@ -32,8 +32,8 @@ nav_order: 7
 | **4.1.4** | 可用性が重要なアプリケーションについて、妨害からの保護または検出が提供されていることを検証します。 | | ✓ | ✓ |
 | **4.1.5** | デバイスの TLS 実装が独自の証明書ストアを使用し、エンドポイントの証明書または公開鍵にピン留めし、信頼できる CA により署名されている場合でも異なる証明書または鍵を持つエンドポイントへの接続を許可しないことを検証します。 | | ✓ | ✓ |
 | **4.1.6** | チップ間通信が暗号化されていることを検証します。 (メインボードからドーターボードへの通信など) | | | ✓ |
-| **4.1.7** | Verify that TLS implementations for devices expected to operate beyond 2030 support post-quantum key exchange mechanisms (e.g., ML-KEM per FIPS 203) or hybrid key exchange combining classical ECDH with PQC algorithms. | | | ✓ |
-| **4.1.8** | Verify that X.509 certificates used for authentication support post-quantum signature algorithms (ML-DSA, SLH-DSA) or hybrid certificate chains for quantum resistance in devices expected to operate beyond 2030. | | | ✓ |
+| **4.1.7** | 2030年を超えて運用することを予定しているデバイスにおける TLS 実装が耐量子鍵交換メカニズム (FIPS 203 の ML-KEM など) または従来の ECDH と PQC アルゴリズムを組み合わせたハイブリッド鍵交換をサポートしていることを検証します。 | | | ✓ |
+| **4.1.8** | 2030年を超えて運用することを予定しているデバイスにおいて、認証に使用される X.509 証明書が耐量子署名アルゴリズム (ML-DSA, SLH-DSA) または耐量子のハイブリッド証明書チェーンをサポートしていることを検証します。 | | | ✓ |
 
 ### マシン間
 
