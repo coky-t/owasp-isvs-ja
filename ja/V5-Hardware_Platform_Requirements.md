@@ -32,7 +32,7 @@ nav_order: 8
 | **5.1.10** | 説明的なシルクスクリーンが PCB から除去されていることを検証します。 | | | ✓ |
 | **5.1.11** | デバッグパスとトレースが製品 PCB から取り外されていることを検証します。 | | | ✓ |
 | **5.1.12** | FPGA ビットストリームが強力でセキュアなアルゴリズムを使用して暗号化されていることを検証します。 | | | ✓ |
-| **5.1.13** | Verify that cryptographic accelerators support post-quantum algorithms (ML-KEM, ML-DSA, SLH-DSA) or provide sufficient performance for software-based PQC implementations on resource-constrained devices expected to operate beyond 2030. | | | ✓ |
+| **5.1.13** | 2030 年を超えて運用することを予定しているリソース制約のあるデバイスにおいて、暗号アクセラレータが耐量子アルゴリズム (ML-KEM, ML-DSA, SLH-DSA) をサポートしているか、あるいはソフトウェアベースの PQC 実装に対して十分な性能を提供していることを検証します。 | | | ✓ |
 
 ## 参考情報
 詳細については、以下も参照してください。
