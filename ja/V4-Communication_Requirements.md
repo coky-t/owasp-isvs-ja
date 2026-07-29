@@ -14,9 +14,9 @@ nav_order: 7
 - その他のセキュリティプラクティスにはピンニングと相互認証を備える証明書ベースの認証が含まれます。
 - 最新の構成を使用して、通信に使用されるアルゴリズムと暗号の優先順序を有効にして設定します。
 
-For Level 3 devices requiring the highest security posture, modern wireless protocols with advanced security features are mandated. Bluetooth 5.3+ provides critical protections including encryption key size enforcement (preventing KNOB attacks), enhanced channel security, and support for encrypted advertising data (Bluetooth 5.4+). These features defend against contemporary attack vectors including man-in-the-middle attacks, passive eavesdropping, key negotiation vulnerabilities, and interference-based attacks in hostile RF environments.
+最高のセキュリティ態勢を要求するレベル 3 デバイスには、高度なセキュリティ機能を備えた最新の無線プロトコルが義務付けられています。Bluetooth 5.3 以降では、暗号鍵サイズの強制 (KNOB 攻撃の防止)、チャネルセキュリティの強化、暗号化されたアドバタイジングデータのサポート (Bluetooth 5.4 以降) といった重要な保護を提供します。これらの機能は、中間者攻撃、受動的な盗聴、キーネゴシエーションの脆弱性、厳しい RF 環境での干渉ベースの攻撃など、現代の攻撃ベクトルに対して防御します。
 
-For Level 3 devices with operational lifetimes extending beyond 2030, communication security must address quantum computing threats through post-quantum cryptography. TLS implementations should support quantum-resistant key exchange (ML-KEM) and digital signatures (ML-DSA, SLH-DSA), or use hybrid approaches combining classical and post-quantum algorithms. This aligns with NIST's quantum-safe migration timeline and ensures long-term confidentiality and authenticity protection.
+2030 年を超えて延長している運用期限を持つレベル 3 デバイスに対して、通信セキュリティは耐量子暗号を通じて量子コンピューティングの脅威に対処する必要があります。TLS 実装は耐量子の鍵交換 (ML-KEM) およびデジタル署名 (ML-DSA, SLH-DSA) をサポートするか、あるいは従来と耐量子のアルゴリズムを組み合わせたハイブリッドアプローチを使用すべきです。これは NIST の量子安全移行タイムラインに沿っており、長期的な機密性と真正性の保護を確保します。
 - 非推奨または既知のセキュアではないアルゴリズムと暗号を無効にします。
 - 有線および無線通信プロトコルで利用可能な最も強力なセキュリティ設定を使用します。
 
