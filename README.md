@@ -31,7 +31,8 @@ ISVS は IoT システムやそのコンポーネント (IoT ハードウェア�
 * [V3: ソフトウェアプラットフォーム要件](ja/V3-Software_Platform_Requirements.md)
 * [V4: 通信要件](ja/V4-Communication_Requirements.md)
 * [V5: ハードウェアプラットフォーム要件](ja/V5-Hardware_Platform_Requirements.md)
-* [付録A: 用語集](ja/Appendix_A-Glossary.md)
+* [付録 A - 用語集](ja/Appendix_A-Glossary.md)
+* [付録 B - コンプライアンスマッピング](ja/Appendix_B-Compliance_Mapping.md)
 
 ## License
 
