@@ -8,15 +8,15 @@ nav_order: 10
 
 ## 概要
 
-This appendix provides a cross-reference between ISVS security requirements and three major IoT-related regulatory and technical frameworks: the EU Cyber Resilience Act (CRA), the EU Radio Equipment Directive Delegated Regulation 2022/30 (RED), the NIST SP 800-213A IoT Device Cybersecurity Requirements Catalog, and ETSI EN 303 645 v2.1.1.
+この付録では、ISVS のセキュリティ要件と、IoT に関連する三つの主要な規制および技術的フレームワーク (欧州サイバーレジリエンス法 (EU Cyber Resilience Act, CRA)、欧州無線機器指令 委任規則 2022/30 (EU Radio Equipment Directive Delegated Regulation 2022/30, RED)、NIST SP 800-213A IoT Device Cybersecurity Requirements Catalog、ETSI EN 303 645 v2.1.1) の間のクロスリファレンスを提示します。
 
-The mapping is provided in two directions. Table 1 (ISVS to Frameworks) allows practitioners to determine which regulatory or framework obligations a given ISVS requirement supports. Table 2 (Frameworks to ISVS) allows compliance teams working from a specific regulation to identify which ISVS requirements collectively address a given clause.
+マッピングは双方向で提示されています。表 1 (ISVE からフレームワークへ) は、特定の ISVS 要件がどの規制やフレームワークの義務をサポートしているかを、実務担当者が判断できます。表 2 (フレームワークから ISVS へ) は、特定の規制に基づいて作業するコンプライアンスチームが、特定の条項をどの ISVS 要件が包括的に取り扱うかを特定できます。
 
-**This appendix is informative only.** Satisfying ISVS requirements does not constitute legal compliance with any regulation listed here, and compliance with a framework cannot be claimed solely based on this mapping. Readers should consult the full text of each framework and, where applicable, seek legal or conformity assessment advice.
+**この付録は情報提供のみです。** ISVS 要件を満たすことは、ここに記載されたいずれの規制での法的な遵守を成すものではなく、このマッピングのみに基づいてフレームワークへの遵守を主張できません。読者は各フレームワークの全文を参照し、該当する場合には、法務または適合性評価の助言を求めます。
 
-**Scope note:** This mapping covers ISVS requirements present in the v1.0 release (master branch). Requirements introduced in subsequent releases — including V1.5 Incident Response, additional V2, V3, V4, and V5 requirements targeting Bluetooth 5.3+, post-quantum cryptography, and related topics — will be incorporated in a future update of this appendix.
+**スコープに関する注記:** このマッピングは v1.0 リリース (master ブランチ) 時点の ISVS 要件をカバーしています。それ以降のリリースで導入された要件 (V1.5 インシデント対応、Bluetooth 5.3 以降、耐量子暗号技術、その他関連トピックスを対象とした V2, V3, V4, V5 の追加要件など) は、この付録の将来の更新で組み込まれるでしょう。
 
-A mapping cell marked **Partial** indicates that the ISVS requirement addresses part of the referenced clause but does not satisfy it entirely on its own. A cell containing a clause reference without qualification indicates substantive, direct alignment. A dash (—) indicates no meaningful alignment exists.
+**一部 (Partial)** とマークされたマッピングセルは、ISVS 要件が参照先の条項の一部を扱っていますが、それ自体では完全に満たしてはいません。修飾語句なしでの条項の参照情報を含むセルは、実質的で、直接的な整合性を示しています。ダッシュ (—) は意味のある整合性が存在しないことを示しています。
 
 ---
 
