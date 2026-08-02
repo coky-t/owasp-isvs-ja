@@ -14,3 +14,4 @@
 ## 付録
 
 - [付録 A - 用語集](Appendix_A-Glossary.md)
+- [付録 B - コンプライアンスマッピング](Appendix_B-Compliance_Mapping.md)
