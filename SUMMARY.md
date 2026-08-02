@@ -19,3 +19,4 @@
 ## 付録
 
 - [付録 A - 用語集](ja/Appendix_A-Glossary.md)
+- [付録 B - コンプライアンスマッピング](ja/Appendix_B-Compliance_Mapping.md)
