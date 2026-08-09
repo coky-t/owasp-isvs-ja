@@ -24,7 +24,7 @@ nav_order: 10
 
 ### 欧州サイバーレジリエンス法 (EU Cyber Resilience Act, CRA)
 
-The Cyber Resilience Act (Regulation (EU) 2024/2847) entered into force on December 11, 2024, with product security obligations applying from December 11, 2027 and vulnerability handling obligations from September 11, 2026. It applies to all products with digital elements placed on the EU market, including IoT devices. Annex I, Part I specifies essential cybersecurity requirements covering secure default configuration, authentication, encryption, attack surface minimization, exploitation mitigation, security monitoring, and secure data handling. Annex I, Part II covers vulnerability handling obligations including software bill of materials (SBOM), coordinated vulnerability disclosure, and active vulnerability remediation. Article 13 imposes manufacturer obligations on technical documentation, designated contact points, and supply chain due diligence.
+サイバーレジリエンス法 (Regulation (EU) 2024/2847) は 2024 年 12 月 11 日に発効しました。製品セキュリティに関する義務は 2027 年 12 月 11 日から、脆弱性対応に関する義務は 2026 年 9 月 11 日から適用します。それは、IoT デバイスを含む、欧州市場に置かれる、デジタル要素を有するすべての製品に適用します。Annex I, Part I では、安全なデフォルト設定、認証、暗号化、攻撃対象領域の最小か、エクスプロイトの緩和、セキュリティ監視、安全なデータの取り扱いをカバーする、必須のサイバーセキュリティ要件を規定します。Annex I, Part II では、ソフトウェア部品表 (SBOM)、協調的な脆弱性開示、積極的な脆弱性緩和など、脆弱性対処義務をカバーします。Article 13 では、技術文書、指定連絡窓口、サプライチェーンのデューディリジェンスに関する製造者義務を課します。
 
 ### 欧州無線機器指令 - 委任規則 2022/30 (EU Radio Equipment Directive — Delegated Regulation 2022/30, RED)
 
