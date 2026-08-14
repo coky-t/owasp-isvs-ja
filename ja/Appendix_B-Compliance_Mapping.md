@@ -28,7 +28,7 @@ nav_order: 10
 
 ### 欧州無線機器指令 - 委任規則 2022/30 (EU Radio Equipment Directive — Delegated Regulation 2022/30, RED)
 
-Commission Delegated Regulation (EU) 2022/30 supplements the Radio Equipment Directive (2014/53/EU) by activating Article 3.3(d), (e), and (f) for internet-connected radio equipment. It became mandatory on August 1, 2025. Harmonized standards EN 18031-1, EN 18031-2, and EN 18031-3 provide the technical specifications for, respectively, network protection, personal data and privacy protection, and fraud prevention. The RED applies to a broad range of connected consumer and industrial radio devices including Wi-Fi, Bluetooth, Zigbee, LoRaWAN, and cellular devices, making it highly relevant to IoT deployments.
+委員会委任規則 (EU) 2022/30 は、インターネット接続する無線機器に対して、条項 3.3(d), (e), (f) を有効にすることにより、無線機器指令 (2014/53/EU) を補完するものです。2025 年 8 月 1 日に義務化されました。整合規則 EN 18031-1, EN 18031-2, EN 18031-3 は、それぞれ、ネットワーク保護、個人データおよびプライバシーの保護、不正防止に関する技術仕様を規定しています。RED は、Wi-Fi, Bluetooth, Zigbee, LoRaWAN, セルラー機器など、コネクテッドされる広範な範囲の民生用および産業用の無線機器に適用し、IoT 導入において極めて重要になります。
 
 ### NIST SP 800-213A
 
