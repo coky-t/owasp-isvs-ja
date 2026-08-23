@@ -36,7 +36,7 @@ NIST Special Publication 800-213A "IoT Device Cybersecurity Requirements Catalog
 
 ### ETSI EN 303 645 v2.1.1
 
-ETSI EN 303 645 is the leading international baseline security standard for consumer IoT, published by the European Telecommunications Standards Institute. Version 2.1.1 comprises 13 provisions covering the most critical security outcomes for consumer IoT products. It forms the technical basis for several national IoT security schemes (including the UK Product Security and Telecommunications Infrastructure Act) and is referenced by the EU CRA harmonized standard development process. Its provisions address default password elimination, vulnerability disclosure, software updates, credential storage, secure communication, attack surface minimization, software integrity, personal data protection, resilience, telemetry, data deletion, secure installation, and input validation.
+ETSI EN 303 645 は、欧州電気通信標準化機構 (European Telecommunications Standards Institute) によって発行された、コンシューマー IoT 向けの主要な国際的なベースラインとしてのセキュリティ標準です。バージョン 2.1.1 は、コンシューマー IoT 製品に対して最も重要なセキュリティ成果をカバーする 13 の条項で構成しています。これはいくつかの国の IoT セキュリティスキーム (英国の製品セキュリティおよび電気通信インフラ法 (UK Product Security and Telecommunications Infrastructure Act) など) の技術的基盤を形作り、欧州のサイバーレジリエンス法 (EU CRA) 整合規格策定プロセスによって参照されています。その規定は、デフォルトパスワードの廃止、脆弱性開示、ソフトウェア更新、クレデンシャルの保管、安全な通信、攻撃対象領域の最小化、ソフトウェア完全性、個人データ保護、レジリエンス、テレメトリ、データ削除、安全なインストール、入力バリデーションを扱います。
 
 ---
 
