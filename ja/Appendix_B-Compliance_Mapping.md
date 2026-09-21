@@ -42,21 +42,21 @@ ETSI EN 303 645 は、欧州電気通信標準化機構 (European Telecommunicat
 
 ## 重要な注意事項
 
-1. **Informative status.** This appendix is informative and does not constitute legal or conformity advice. Manufacturers and operators seeking to demonstrate compliance with any listed regulation must engage with the full normative text of that regulation and, where required, an appropriate conformity assessment body.
+1. **情報提供。** この付録は情報であり、法的助言や適合性の助言を構成するものではありません。記載された規制への準拠を実証しようとする製造業者や運用者は、その規制の規定全文と、必要に応じて適切な適合性評価機関に関与する必要があります。
 
-2. **Partial coverage.** Many regulatory clauses address organizational, process, and documentation obligations that extend beyond the technical controls in the ISVS. A mapping marked "Partial" reflects genuine technical alignment while acknowledging that the full clause requires additional organizational measures.
+2. **部分的な対応。** 多くの規制条項は、ISVS の技術的コントロールを超えて拡張した、組織、プロセス、文書化の義務を取り扱います。"Partial" とマーク付けされたマッピングは純粋に技術的な整合性を反映していますが、完全な条項には追加の組織的措置を必要とすることを認めています。
 
-3. **Framework versions.** Mappings reflect the versions stated in the section headings. Future revisions to any framework may alter the alignment described here.
+3. **フレームワークのバージョン。** マッピングはセクションの見出しに記載されているバージョンを反映しています。いずれかのフレームワークでの将来の改訂では、ここで説明されている関連性を変更する可能性があります。
 
-4. **Level independence.** ISVS requirements appear in this mapping regardless of which verification level (L1, L2, L3) they apply to. The level column in each chapter's requirement table indicates applicability; compliance teams should apply that context when using this mapping.
+4. **レベルの独立性。** ISVS 要件は、それらをどの検証レベル (L1, L2, L3) に適用するかにかかわらず、このマッピングに現れます。各章の要件表のレベル列は適用可能性を示しており、コンプライアンスチームはこのマッピングを使用する際にはその文脈を適用する必要があります。
 
-5. **Future updates.** This mapping will be revised when additional ISVS requirements (V1.5, Bluetooth 5.3+, post-quantum cryptography, and others) are formally adopted into the standard.
+5. **将来の更新。** このマッピングは、追加の ISVS 要件 (V1.5、Bluetooth 5.3 以降、耐量子暗号、その他) が正式に規格に採用された際に、改訂されます。
 
-6. **Notation.** In Table 1, a cell containing a clause reference without qualification indicates substantive, direct alignment; the word `Partial` indicates the requirement addresses part of the clause only. In Table 2, requirement IDs followed by **(P)** indicate partial coverage of that clause. A dash (—) in either table indicates no meaningful alignment exists.
+6. **表記法。** 表 1 では、修飾語なしで条項への参照を含むセルは実質的かつ直接的な対応を示します。`Partial` という語はその要件が条項の一部のみを取り扱います。表 2 では、**(P)** が続く要件 ID はその条項の部分的な対応を示します。いずれの表でも、ダッシュ (—) は意味のある対応が存在しないことを示します。
 
-7. **Ecosystem-level obligations.** Some framework clauses impose obligations at the network or ecosystem level rather than on the device itself. These are correctly mapped to `—` not because ISVS has a content gap, but because the obligation falls outside the scope of a device-level standard. CRA Annex I 2(i) ("minimize negative impact on connected devices or networks") is the primary example: it is satisfied through network architecture, operational practices, and ecosystem design rather than through device-level controls.
+7. **エコシステムレベルの義務。** 一部のフレームワーク条項は、デバイス自体ではなく、ネットワークやエコシステムレベルでの義務を課しています。これらが `—` に正しくマップされているのは、ISVS に内容の欠落があるからではなく、その義務がデバイスレベルの規格のスコープ外にあるためです。CRA Annex I 2(i) (「接続されるデバイスやネットワークへの悪影響を最小限に抑える」) がその主な例です。それは、デバイスレベルのコントロールではなく、ネットワークアーキテクチャ、運用慣行、エコシステムの設計を通じて満たされます。
 
-8. **CRA harmonized standards.** As of the date of this appendix, no harmonized standards for the Cyber Resilience Act (EN 40000 series) have been published in the EU Official Journal. CRA Annex I requirements in this mapping are drawn directly from the regulation text. Until harmonized standards are cited in the Official Journal (projected Q4 2026 at the earliest), manufacturers must self-assess against Annex I directly. For current status, monitor the European Commission's harmonized standards register and [stan4cra.eu](https://www.stan4cra.eu).
+8. **CRA 整合規格。** この付録の時点では、サイバーレジリエンス法に対する整合規格 (EN 40000 シリーズ) は EU 官報に掲載されていません。このマッピングでの CRA Annex I 要件は規制の条文から直接引用されています。整合規格が官報に掲載されるまで (最短でも 2026 年 Q4 の予定) は、製造業者は Annex I に対して直接自ら評価を行う必要があります。最新の状況については、欧州委員会の整合規格登録簿および [stan4cra.eu](https://www.stan4cra.eu) を確認してください。
 
 ---
 
