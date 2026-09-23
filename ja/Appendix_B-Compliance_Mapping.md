@@ -62,11 +62,11 @@ ETSI EN 303 645 は、欧州電気通信標準化機構 (European Telecommunicat
 
 ## 表 1: ISVS からフレームワークへのマッピング
 
-The table below maps each ISVS requirement to the most relevant clauses in each covered framework. Requirements are grouped by chapter (V1–V5).
+以下の表は各 ISVS 要件を、カバーする各フレームワークの最も関連性の高い条項にマップしたものです。要件は章 (V1–V5) ごとにグループ化されています。
 
-| ISVS Req | CRA Annex I Part I | CRA Annex I Part II | RED 3.3(d) EN 18031-1 | RED 3.3(e) EN 18031-2 | RED 3.3(f) EN 18031-3 | NIST SP 800-213A | ETSI EN 303 645 |
-|----------|-------------------|--------------------|-----------------------|-----------------------|-----------------------|------------------|-----------------|
-| **V1 — IoT Ecosystem Requirements** | | | | | | | |
+| ISVS 要件 | CRA Annex I Part I | CRA Annex I Part II | RED 3.3(d) EN 18031-1 | RED 3.3(e) EN 18031-2 | RED 3.3(f) EN 18031-3 | NIST SP 800-213A | ETSI EN 303 645 |
+|-----------|--------------------|---------------------|-----------------------|-----------------------|-----------------------|------------------|-----------------|
+| **V1 — IoT エコシステム要件** | | | | | | | |
 | **1.1.1** Verify IoT system security level matches capabilities and deployment risk | — | — | — | — | — | — | — |
 | **1.1.2** Verify all components and channels are identified; unnecessary ones removed | 2(j) | — | Partial | — | — | DI (IMS), DS (DIN) | 5.6-1, 5.6-5 |
 | **1.1.3** Verify threat modeling is used for product design and feature changes | — | — | — | — | — | — | — |
@@ -104,7 +104,7 @@ The table below maps each ISVS requirement to the most relevant clauses in each 
 | **1.4.5** Verify logs can be securely retrieved from devices | 2(l) | — | Partial | — | — | CS (AUP) | 5.10-1 |
 | **1.4.6** Verify logs retained per policy and safely deleted when retention expires | 2(g), 2(m) | — | — | Partial | — | CS (LSR) | 5.8-1, 5.11-1 |
 | **1.4.7** Verify confidentiality, integrity and authenticity of logs is protected | 2(e), 2(f), 2(l) | — | — | — | — | CS (AUP), DP (CRY) | — |
-| **V2 — User Space Application Requirements** | | | | | | | |
+| **V2 — ユーザー空間アプリケーション要件** | | | | | | | |
 | **2.1.1** Verify all users and accounts can be uniquely identified | 2(d) | — | Partial | Partial | — | DI (IMS) | — |
 | **2.1.2** Verify all connected devices can be uniquely identified | 2(d) | — | Partial | — | — | DI (IMS), DI (AID) | — |
 | **2.1.3** Verify strong user and device authentication is enforced across the ecosystem | 2(d) | — | Partial | Partial | Partial | LA (AUN), DI (DAS) | 5.1-1 |
@@ -130,7 +130,7 @@ The table below maps each ISVS requirement to the most relevant clauses in each 
 | **2.4.4** Verify cryptographic secrets stored securely using dedicated security chip functionality | 2(e), 2(f) | — | — | Partial | — | DP (KEY), DP (STO) | 5.4-1 |
 | **2.4.5** Verify cryptographic primitives are provided by dedicated security chips | 2(e), 2(k) | — | — | — | — | DP (CRY) | — |
 | **2.4.6** Verify cryptographic libraries are certified to a recognized standard | 2(e) | — | — | — | — | DP (CRY) | — |
-| **V3 — Software Platform Requirements** | | | | | | | |
+| **V3 — ソフトウェアプラットフォーム要件** | | | | | | | |
 | **3.1.1** Verify bootloader does not allow code loaded from arbitrary local or network locations | 2(f), 2(j), 2(k) | — | Partial | — | — | DS (EXE), DS (DIN) | 5.7-1 |
 | **3.1.2** Verify bootloader configurations are immutable in production | 2(b), 2(f) | — | Partial | — | — | DS (DIN), DC (CTL) | 5.7-1 |
 | **3.1.3** Verify communication interfaces (USB, UART) disabled or protected during boot | 2(j) | — | Partial | — | — | LA (IFC), DS (OPS) | 5.6-2 |
@@ -173,7 +173,7 @@ The table below maps each ISVS requirement to the most relevant clauses in each 
 | **3.5.4** Verify deprecated ciphers and hash functions not used even when provided by security chip | 2(e) | — | Partial | Partial | — | DP (CRY) | 5.5-1 |
 | **3.6.1** Verify loaded kernel modules are cryptographically signed and verified | 2(f), 2(k) | — | Partial | — | — | DS (DIN), DP (CRY) | 5.7-1 |
 | **3.6.2** Verify only required kernel modules are enabled during runtime | 2(j) | — | — | — | — | DS (EXE), LA (IFC) | 5.6-1 |
-| **V4 — Communication Requirements** | | | | | | | |
+| **V4 — 通信要件** | | | | | | | |
 | **4.1.1** Verify communication with all ecosystem components occurs over a secure channel (confidentiality, integrity, replay protection) | 2(e), 2(f) | — | Partial | Partial | — | DP (STX), DS (COM) | 5.5-1 |
 | **4.1.2** Verify only strong cipher suites are enabled, with strongest set as preferred | 2(e) | — | Partial | Partial | Partial | DP (CRY), DS (COM) | 5.5-1 |
 | **4.1.3** Verify TLS implementation cryptographically verifies X.509 certificates | 2(d), 2(e), 2(f) | — | Partial | Partial | — | DP (STX), LA (AUN) | 5.5-1 |
@@ -207,7 +207,7 @@ The table below maps each ISVS requirement to the most relevant clauses in each 
 | **4.6.3** Verify all LoRaWAN gateway communications use a secure channel for integrity and authenticity | 2(e), 2(f) | — | Partial | — | — | DP (STX), DS (COM) | 5.5-1 |
 | **4.6.4** Verify LoRaWAN root keys are unique per end device | 2(d), 2(e) | — | Partial | — | — | DP (KEY), DI (DAS) | 5.4-1 |
 | **4.6.5** Verify LoRaWAN replay attacks are not possible using off-sequence frame counters | 2(f) | — | Partial | — | — | DP (STX), DS (COM) | — |
-| **V5 — Hardware Platform Requirements** | | | | | | | |
+| **V5 — ハードウェアプラットフォーム要件** | | | | | | | |
 | **5.1.1** Verify platform supports disabling or protecting debugging interfaces (JTAG, SWD, UART) | 2(j) | — | — | — | — | LA (IFC), DS (OPS) | 5.6-2 |
 | **5.1.2** Verify platform supports validating authenticity of the first-stage bootloader | 2(f), 2(k) | — | Partial | — | — | DS (DIN) | 5.7-1 |
 | **5.1.3** Verify platform provides cryptographic accelerator functions | 2(e), 2(k) | — | — | — | — | DP (CRY) | — |
