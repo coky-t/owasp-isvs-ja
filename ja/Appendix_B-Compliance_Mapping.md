@@ -67,12 +67,12 @@ ETSI EN 303 645 は、欧州電気通信標準化機構 (European Telecommunicat
 | ISVS 要件 | CRA Annex I Part I | CRA Annex I Part II | RED 3.3(d) EN 18031-1 | RED 3.3(e) EN 18031-2 | RED 3.3(f) EN 18031-3 | NIST SP 800-213A | ETSI EN 303 645 |
 |-----------|--------------------|---------------------|-----------------------|-----------------------|-----------------------|------------------|-----------------|
 | **V1 — IoT エコシステム要件** | | | | | | | |
-| **1.1.1** Verify IoT system security level matches capabilities and deployment risk | — | — | — | — | — | — | — |
-| **1.1.2** Verify all components and channels are identified; unnecessary ones removed | 2(j) | — | Partial | — | — | DI (IMS), DS (DIN) | 5.6-1, 5.6-5 |
-| **1.1.3** Verify threat modeling is used for product design and feature changes | — | — | — | — | — | — | — |
-| **1.1.4** Verify security controls enforced server-side; data not blindly trusted | 2(d), 2(f) | — | — | — | — | LA (AUZ), DP (STX) | 5.13-1 |
-| **1.1.5** Verify responsible disclosure policy is established and published | — | Part II (CVD) | — | — | — | Non-tech (BUG) | 5.2-1, 5.2-2 |
-| **1.1.6** Verify users are notified when vulnerabilities affect products | — | Part II (CVD) | — | — | — | Non-tech (VNT) | 5.2-3 |
+| **1.1.1** IoT システムセキュリティレベルが機能とデプロイメントのリスクと整合していることを検証します | — | — | — | — | — | — | — |
+| **1.1.2** すべてのコンポーネントとチャネルが特定され、不要なものが削除されていることを検証します | 2(j) | — | Partial | — | — | DI (IMS), DS (DIN) | 5.6-1, 5.6-5 |
+| **1.1.3** 脅威モデリングが製品の設計と機能変更に使用されていることを検証します | — | — | — | — | — | — | — |
+| **1.1.4** セキュリティコントロールがサーバー側で実施され、データが盲目的に信頼されていないことを検証します | 2(d), 2(f) | — | — | — | — | LA (AUZ), DP (STX) | 5.13-1 |
+| **1.1.5** 責任ある開示ポリシーが確立および公開されていることを検証します | — | Part II (CVD) | — | — | — | Non-tech (BUG) | 5.2-1, 5.2-2 |
+| **1.1.6** 脆弱性が製品に影響を及ぼす場合、ユーザーに通知されていることを検証します | — | Part II (CVD) | — | — | — | Non-tech (VNT) | 5.2-3 |
 | **1.2.1** Verify SBOM is maintained for each application in the ecosystem | — | Part II (SBOM) | — | — | — | Non-tech (DOC) | — |
 | **1.2.2** Verify risks from third-party and open-source software are identified and mitigated | — | Part II | — | — | — | Non-tech (DOC), DS (DIN) | — |
 | **1.2.3** Verify devices released with secure default firmware configurations | 2(b) | — | Partial | — | — | DC (CTL), DC (AUT) | 5.1-1, 5.1-2 |
