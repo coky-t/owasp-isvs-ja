@@ -73,15 +73,15 @@ ETSI EN 303 645 は、欧州電気通信標準化機構 (European Telecommunicat
 | **1.1.4** セキュリティコントロールがサーバー側で実施され、データが盲目的に信頼されていないことを検証します | 2(d), 2(f) | — | — | — | — | LA (AUZ), DP (STX) | 5.13-1 |
 | **1.1.5** 責任ある開示ポリシーが確立および公開されていることを検証します | — | Part II (CVD) | — | — | — | Non-tech (BUG) | 5.2-1, 5.2-2 |
 | **1.1.6** 脆弱性が製品に影響を及ぼす場合、ユーザーに通知されていることを検証します | — | Part II (CVD) | — | — | — | Non-tech (VNT) | 5.2-3 |
-| **1.2.1** Verify SBOM is maintained for each application in the ecosystem | — | Part II (SBOM) | — | — | — | Non-tech (DOC) | — |
-| **1.2.2** Verify risks from third-party and open-source software are identified and mitigated | — | Part II | — | — | — | Non-tech (DOC), DS (DIN) | — |
-| **1.2.3** Verify devices released with secure default firmware configurations | 2(b) | — | Partial | — | — | DC (CTL), DC (AUT) | 5.1-1, 5.1-2 |
-| **1.2.4** Verify debugging interfaces disabled or protected before shipping | 2(j), 2(k) | — | — | — | — | LA (IFC), DS (OPS) | 5.6-2 |
-| **1.2.5** Verify FPGA debug capabilities disabled on production PCBs | 2(j) | — | — | — | — | LA (IFC) | 5.6-2 |
-| **1.2.6** Verify hardware-based, immutable cryptographic root of trust | 2(f), 2(k) | — | Partial | — | — | DS (DIN), DS (EXE) | 5.7-1 |
-| **1.2.7** Verify code integrity protection enabled and locked in hardware | 2(f), 2(k) | — | Partial | — | — | DS (DIN) | 5.7-1 |
-| **1.2.8** Verify third-party code analyzed via static analysis for backdoors | — | Part II | — | — | — | Non-tech (DOC) | — |
-| **1.2.9** Verify all components including drivers and modules can be updated for security patches | 2(c) | — | — | — | — | SU (UPD) | 5.3-2 |
+| **1.2.1** SBOM がエコシステム内の各アプリケーションに対して保守されていることを検証します | — | Part II (SBOM) | — | — | — | Non-tech (DOC) | — |
+| **1.2.2** サードパーティとオープンソースのソフトウェアからのリスクが特定され、緩和されていることを検証します | — | Part II | — | — | — | Non-tech (DOC), DS (DIN) | — |
+| **1.2.3** デバイスがセキュアなデフォルトファームウェア設定でリリースされていることを検証します | 2(b) | — | Partial | — | — | DC (CTL), DC (AUT) | 5.1-1, 5.1-2 |
+| **1.2.4** デバッグインタフェースが出荷前に無効化または保護されていることを検証します | 2(j), 2(k) | — | — | — | — | LA (IFC), DS (OPS) | 5.6-2 |
+| **1.2.5** FPGA デバッグ機能が製品 PCB 上で無効化されていることを検証します | 2(j) | — | — | — | — | LA (IFC) | 5.6-2 |
+| **1.2.6** ハードウェアベースで不変の暗号論的信頼のルートを検証します | 2(f), 2(k) | — | Partial | — | — | DS (DIN), DS (EXE) | 5.7-1 |
+| **1.2.7** コード完全性保護が有効化され、ハードウェアでロックされていることを検証します | 2(f), 2(k) | — | Partial | — | — | DS (DIN) | 5.7-1 |
+| **1.2.8** サードパーティコードが静的解析を介してバックドアについて解析されていることを検証します | — | Part II | — | — | — | Non-tech (DOC) | — |
+| **1.2.9** ドライバやモジュールを含むすべてのコンポーネントがセキュリティパッチについて更新可能であることを検証します | 2(c) | — | — | — | — | SU (UPD) | 5.3-2 |
 | **1.3.1** Verify builds use a secure and repeatable build environment | — | Part II | — | — | — | Non-tech (DOC) | — |
 | **1.3.2** Verify GPL firmware source is published without sensitive information | — | — | — | — | — | Non-tech (DOC) | — |
 | **1.3.3** Verify banned C/C++ functions replaced with safe equivalents | 2(k) | — | — | — | — | DS (EXE) | — |
