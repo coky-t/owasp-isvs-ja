@@ -82,21 +82,21 @@ ETSI EN 303 645 は、欧州電気通信標準化機構 (European Telecommunicat
 | **1.2.7** コード完全性保護が有効化され、ハードウェアでロックされていることを検証します | 2(f), 2(k) | — | Partial | — | — | DS (DIN) | 5.7-1 |
 | **1.2.8** サードパーティコードが静的解析を介してバックドアについて解析されていることを検証します | — | Part II | — | — | — | Non-tech (DOC) | — |
 | **1.2.9** ドライバやモジュールを含むすべてのコンポーネントがセキュリティパッチについて更新可能であることを検証します | 2(c) | — | — | — | — | SU (UPD) | 5.3-2 |
-| **1.3.1** Verify builds use a secure and repeatable build environment | — | Part II | — | — | — | Non-tech (DOC) | — |
-| **1.3.2** Verify GPL firmware source is published without sensitive information | — | — | — | — | — | Non-tech (DOC) | — |
-| **1.3.3** Verify banned C/C++ functions replaced with safe equivalents | 2(k) | — | — | — | — | DS (EXE) | — |
-| **1.3.4** Verify packages downloaded from trusted sources | — | Part II | — | — | — | SU (UPD) | — |
-| **1.3.5** Verify build pipelines only build source code from version control | — | Part II | — | — | — | Non-tech (DOC) | — |
-| **1.3.6** Verify compilers and development tools are monitored for tampering | — | Part II | — | — | — | DS (DIN) | — |
-| **1.3.7** Verify packages compiled with Object Size Checking (FORTIFY_SOURCE) | 2(k) | — | — | — | — | DS (EXE) | — |
-| **1.3.8** Verify packages compiled with NX / DEP | 2(k) | — | — | — | — | DS (EXE) | — |
-| **1.3.9** Verify packages compiled with PIE | 2(k) | — | — | — | — | DS (EXE) | — |
-| **1.3.10** Verify packages compiled with Stack Smashing Protector (SSP) | 2(k) | — | — | — | — | DS (EXE) | — |
-| **1.3.11** Verify packages compiled with RELRO | 2(k) | — | — | — | — | DS (EXE) | — |
-| **1.3.12** Verify release builds contain no debug code or privileged diagnostics | 2(b), 2(j) | — | — | — | — | DC (CTL), LA (IFC) | 5.6-2 |
-| **1.3.13** Verify debug and release firmware signed with different keys | 2(f), 2(k) | — | — | — | — | SU (UPD), DP (CRY) | 5.7-1 |
-| **1.3.14** Verify debug info does not contain sensitive information (PII, credentials, keys) | 2(e), 2(g) | — | — | Partial | — | DP (STO) | 5.8-1 |
-| **1.3.15** Verify embedded applications are not susceptible to OS command injection | 2(k) | — | — | — | — | DS (EXE) | 5.13-1 |
+| **1.3.1** ビルドが安全かつ反復可能なビルド環境を使用していることを検証します | — | Part II | — | — | — | Non-tech (DOC) | — |
+| **1.3.2** GPL ファームウェアソースが機密情報なしで公開されていることを検証します | — | — | — | — | — | Non-tech (DOC) | — |
+| **1.3.3** 禁止されている C/C++ 関数が安全な代替のもので置き換えられていることを検証します | 2(k) | — | — | — | — | DS (EXE) | — |
+| **1.3.4** パッケージが信頼できるソースからダウンロードされていることを検証します | — | Part II | — | — | — | SU (UPD) | — |
+| **1.3.5** ビルドパイプラインがバージョン管理からのソースコードのみをビルドしていることを検証します | — | Part II | — | — | — | Non-tech (DOC) | — |
+| **1.3.6** コンパイラや開発ツールが改竄されていないか監視されていることを検証します | — | Part II | — | — | — | DS (DIN) | — |
+| **1.3.7** パッケージが Object Size Checking (FORTIFY_SOURCE) ありでコンパイルされていることを検証します | 2(k) | — | — | — | — | DS (EXE) | — |
+| **1.3.8** パッケージが NX / DEP ありでコンパイルされていることを検証します | 2(k) | — | — | — | — | DS (EXE) | — |
+| **1.3.9** パッケージが PIE ありでコンパイルされていることを検証します | 2(k) | — | — | — | — | DS (EXE) | — |
+| **1.3.10** パッケージが Stack Smashing Protector (SSP) ありでコンパイルされていることを検証します | 2(k) | — | — | — | — | DS (EXE) | — |
+| **1.3.11** パッケージが RELRO ありでコンパイルされていることを検証します | 2(k) | — | — | — | — | DS (EXE) | — |
+| **1.3.12** リリースビルドがデバッグコードや特権的な診断機能を含まないことを検証します | 2(b), 2(j) | — | — | — | — | DC (CTL), LA (IFC) | 5.6-2 |
+| **1.3.13** デバッグファームウェアとリリースファームウェアが異なる鍵で署名されていることを検証します | 2(f), 2(k) | — | — | — | — | SU (UPD), DP (CRY) | 5.7-1 |
+| **1.3.14** デバッグ情報が機密情報 (PII、クレデンシャル、鍵) を含まないことを検証します | 2(e), 2(g) | — | — | Partial | — | DP (STO) | 5.8-1 |
+| **1.3.15** 組み込みアプリケーションが OS コマンドインジェクションの影響を受けないことを検証します | 2(k) | — | — | — | — | DS (EXE) | 5.13-1 |
 | **1.4.1** Verify devices can collect security event logs | 2(l) | — | Partial | — | — | CS (LCT), CS (EIM) | 5.10-1 |
 | **1.4.2** Verify logs have adequate granularity (event type, timestamp, source, outcome, actors) | 2(l) | — | Partial | — | — | CS (RDL) | 5.10-1 |
 | **1.4.3** Verify devices use a reliable time source for log timestamp validity | 2(l) | — | — | — | — | CS (SRT) | — |
