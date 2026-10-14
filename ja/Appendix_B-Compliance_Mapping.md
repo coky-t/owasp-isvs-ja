@@ -97,13 +97,13 @@ ETSI EN 303 645 は、欧州電気通信標準化機構 (European Telecommunicat
 | **1.3.13** デバッグファームウェアとリリースファームウェアが異なる鍵で署名されていることを検証します | 2(f), 2(k) | — | — | — | — | SU (UPD), DP (CRY) | 5.7-1 |
 | **1.3.14** デバッグ情報が機密情報 (PII、クレデンシャル、鍵) を含まないことを検証します | 2(e), 2(g) | — | — | Partial | — | DP (STO) | 5.8-1 |
 | **1.3.15** 組み込みアプリケーションが OS コマンドインジェクションの影響を受けないことを検証します | 2(k) | — | — | — | — | DS (EXE) | 5.13-1 |
-| **1.4.1** Verify devices can collect security event logs | 2(l) | — | Partial | — | — | CS (LCT), CS (EIM) | 5.10-1 |
-| **1.4.2** Verify logs have adequate granularity (event type, timestamp, source, outcome, actors) | 2(l) | — | Partial | — | — | CS (RDL) | 5.10-1 |
-| **1.4.3** Verify devices use a reliable time source for log timestamp validity | 2(l) | — | — | — | — | CS (SRT) | — |
-| **1.4.4** Verify logs do not include sensitive information (PII, credentials, keys) | 2(g), 2(l) | — | — | Partial | — | CS (RDL), DP (STO) | 5.8-1 |
-| **1.4.5** Verify logs can be securely retrieved from devices | 2(l) | — | Partial | — | — | CS (AUP) | 5.10-1 |
-| **1.4.6** Verify logs retained per policy and safely deleted when retention expires | 2(g), 2(m) | — | — | Partial | — | CS (LSR) | 5.8-1, 5.11-1 |
-| **1.4.7** Verify confidentiality, integrity and authenticity of logs is protected | 2(e), 2(f), 2(l) | — | — | — | — | CS (AUP), DP (CRY) | — |
+| **1.4.1** デバイスがセキュリティイベントログを収集できることを検証します | 2(l) | — | Partial | — | — | CS (LCT), CS (EIM) | 5.10-1 |
+| **1.4.2** ログが適切な粒度 (イベントタイプ、タイムスタンプ、ソース、結果、アクター) を有することを検証します | 2(l) | — | Partial | — | — | CS (RDL) | 5.10-1 |
+| **1.4.3** デバイスがログのタイムスタンプの妥当性のために信頼できるタイムソースを使用していることを検証します | 2(l) | — | — | — | — | CS (SRT) | — |
+| **1.4.4** ログが機密情報 (PII、クレデンシャル、鍵) を含まないことを検証します | 2(g), 2(l) | — | — | Partial | — | CS (RDL), DP (STO) | 5.8-1 |
+| **1.4.5** ログがデバイスから安全に取得できることを検証します | 2(l) | — | Partial | — | — | CS (AUP) | 5.10-1 |
+| **1.4.6** ログがポリシーに沿って保持されており、保存期間終了時に安全に削除されることを検証します | 2(g), 2(m) | — | — | Partial | — | CS (LSR) | 5.8-1, 5.11-1 |
+| **1.4.7** ログの機密性、完全性、真正性が保護されていることを検証します | 2(e), 2(f), 2(l) | — | — | — | — | CS (AUP), DP (CRY) | — |
 | **V2 — ユーザー空間アプリケーション要件** | | | | | | | |
 | **2.1.1** Verify all users and accounts can be uniquely identified | 2(d) | — | Partial | Partial | — | DI (IMS) | — |
 | **2.1.2** Verify all connected devices can be uniquely identified | 2(d) | — | Partial | — | — | DI (IMS), DI (AID) | — |
