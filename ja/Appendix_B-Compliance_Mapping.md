@@ -36,7 +36,7 @@ NIST Special Publication 800-213A "IoT Device Cybersecurity Requirements Catalog
 
 ### ETSI EN 303 645 v2.1.1
 
-ETSI EN 303 645 は、欧州電気通信標準化機構 (European Telecommunications Standards Institute) によって発行された、コンシューマー IoT 向けの主要な国際的なベースラインとしてのセキュリティ標準です。バージョン 2.1.1 は、コンシューマー IoT 製品に対して最も重要なセキュリティ成果をカバーする 13 の条項で構成しています。これはいくつかの国の IoT セキュリティスキーム (英国の製品セキュリティおよび電気通信インフラ法 (UK Product Security and Telecommunications Infrastructure Act) など) の技術的基盤を形作り、欧州のサイバーレジリエンス法 (EU CRA) 整合規格策定プロセスによって参照されています。その規定は、デフォルトパスワードの廃止、脆弱性開示、ソフトウェア更新、クレデンシャルの保管、安全な通信、攻撃対象領域の最小化、ソフトウェア完全性、個人データ保護、レジリエンス、テレメトリ、データ削除、安全なインストール、入力バリデーションを扱います。
+ETSI EN 303 645 は、欧州電気通信標準化機構 (European Telecommunications Standards Institute) によって発行された、コンシューマー IoT 向けの主要な国際的なベースラインとしてのセキュリティ標準です。バージョン 2.1.1 は、コンシューマー IoT 製品に対して最も重要なセキュリティ成果をカバーする 13 の条項で構成しています。これはいくつかの国の IoT セキュリティスキーム (英国の製品セキュリティおよび電気通信インフラ法 (UK Product Security and Telecommunications Infrastructure Act) など) の技術的基盤を形作り、欧州のサイバーレジリエンス法 (EU CRA) 整合規格策定プロセスによって参照されています。その規定は、デフォルトパスワードの廃止、脆弱性開示、ソフトウェア更新、資格情報の保管、安全な通信、攻撃対象領域の最小化、ソフトウェア完全性、個人データ保護、レジリエンス、テレメトリ、データ削除、安全なインストール、入力バリデーションを扱います。
 
 ---
 
@@ -95,27 +95,27 @@ ETSI EN 303 645 は、欧州電気通信標準化機構 (European Telecommunicat
 | **1.3.11** パッケージが RELRO ありでコンパイルされていることを検証します | 2(k) | — | — | — | — | DS (EXE) | — |
 | **1.3.12** リリースビルドがデバッグコードや特権的な診断機能を含まないことを検証します | 2(b), 2(j) | — | — | — | — | DC (CTL), LA (IFC) | 5.6-2 |
 | **1.3.13** デバッグファームウェアとリリースファームウェアが異なる鍵で署名されていることを検証します | 2(f), 2(k) | — | — | — | — | SU (UPD), DP (CRY) | 5.7-1 |
-| **1.3.14** デバッグ情報が機密情報 (PII、クレデンシャル、鍵) を含まないことを検証します | 2(e), 2(g) | — | — | Partial | — | DP (STO) | 5.8-1 |
+| **1.3.14** デバッグ情報が機密情報 (PII、資格情報、鍵) を含まないことを検証します | 2(e), 2(g) | — | — | Partial | — | DP (STO) | 5.8-1 |
 | **1.3.15** 組み込みアプリケーションが OS コマンドインジェクションの影響を受けないことを検証します | 2(k) | — | — | — | — | DS (EXE) | 5.13-1 |
 | **1.4.1** デバイスがセキュリティイベントログを収集できることを検証します | 2(l) | — | Partial | — | — | CS (LCT), CS (EIM) | 5.10-1 |
 | **1.4.2** ログが適切な粒度 (イベントタイプ、タイムスタンプ、ソース、結果、アクター) を有することを検証します | 2(l) | — | Partial | — | — | CS (RDL) | 5.10-1 |
 | **1.4.3** デバイスがログのタイムスタンプの妥当性のために信頼できるタイムソースを使用していることを検証します | 2(l) | — | — | — | — | CS (SRT) | — |
-| **1.4.4** ログが機密情報 (PII、クレデンシャル、鍵) を含まないことを検証します | 2(g), 2(l) | — | — | Partial | — | CS (RDL), DP (STO) | 5.8-1 |
+| **1.4.4** ログが機密情報 (PII、資格情報、鍵) を含まないことを検証します | 2(g), 2(l) | — | — | Partial | — | CS (RDL), DP (STO) | 5.8-1 |
 | **1.4.5** ログがデバイスから安全に取得できることを検証します | 2(l) | — | Partial | — | — | CS (AUP) | 5.10-1 |
 | **1.4.6** ログがポリシーに沿って保持されており、保存期間終了時に安全に削除されることを検証します | 2(g), 2(m) | — | — | Partial | — | CS (LSR) | 5.8-1, 5.11-1 |
 | **1.4.7** ログの機密性、完全性、真正性が保護されていることを検証します | 2(e), 2(f), 2(l) | — | — | — | — | CS (AUP), DP (CRY) | — |
 | **V2 — ユーザー空間アプリケーション要件** | | | | | | | |
-| **2.1.1** Verify all users and accounts can be uniquely identified | 2(d) | — | Partial | Partial | — | DI (IMS) | — |
-| **2.1.2** Verify all connected devices can be uniquely identified | 2(d) | — | Partial | — | — | DI (IMS), DI (AID) | — |
-| **2.1.3** Verify strong user and device authentication is enforced across the ecosystem | 2(d) | — | Partial | Partial | Partial | LA (AUN), DI (DAS) | 5.1-1 |
-| **2.1.4** Verify user, service, and device authentication shares a common centrally managed framework | 2(d) | — | Partial | — | — | LA (AUN), DC (AUT) | — |
-| **2.1.5** Verify user passwords are at least 12 characters | 2(d) | — | — | — | — | LA (ACF) | 5.1-1 |
-| **2.1.6** Verify users can change their password and must provide current password | 2(b), 2(d) | — | — | — | — | LA (ACF), DC (AUT) | 5.1-1 |
-| **2.1.7** Verify device authentication passwords are sufficiently long and complex | 2(d) | — | Partial | — | — | LA (ACF) | 5.1-1 |
-| **2.1.8** Verify default user or device credentials can be changed by authorized parties | 2(b), 2(d) | — | Partial | — | — | DC (AUT), LA (ACF) | 5.1-1, 5.1-2 |
-| **2.1.9** Verify authentication credentials are not hardcoded in firmware or applications | 2(a), 2(d) | — | Partial | — | — | DP (KEY), DC (AUT) | 5.1-2, 5.4-1 |
-| **2.1.10** Verify provisioned device authentication credentials are unique per device | 2(d) | — | Partial | — | — | DI (DAS), DP (KEY) | 5.1-2 |
-| **2.1.11** Verify authentication schemes can revoke credentials of compromised or decommissioned devices | 2(d) | — | Partial | — | — | LA (ACF), DI (DAS) | — |
+| **2.1.1** すべてのユーザーとアカウントが一意に識別できることを検証します | 2(d) | — | Partial | Partial | — | DI (IMS) | — |
+| **2.1.2** 接続されているすべてのデバイスが一意に識別できることを検証します | 2(d) | — | Partial | — | — | DI (IMS), DI (AID) | — |
+| **2.1.3** 強力なユーザー認証とデバイス認証がエコシステムで適用されていることを検証します | 2(d) | — | Partial | Partial | Partial | LA (AUN), DI (DAS) | 5.1-1 |
+| **2.1.4** ユーザー、サービス、デバイスの認証が一元管理されている共通のフレームワークを共有していることを検証します | 2(d) | — | Partial | — | — | LA (AUN), DC (AUT) | — |
+| **2.1.5** ユーザーパスワードが 12 文字以上であることを検証します | 2(d) | — | — | — | — | LA (ACF) | 5.1-1 |
+| **2.1.6** ユーザーが自身のパスワードを変更できること、および現在のパスワードを提示する必要があることを検証します | 2(b), 2(d) | — | — | — | — | LA (ACF), DC (AUT) | 5.1-1 |
+| **2.1.7** デバイス認証パスワードが十分に長く複雑であることを検証します | 2(d) | — | Partial | — | — | LA (ACF) | 5.1-1 |
+| **2.1.8** 認可された者がデフォルトのユーザーまたはデバイスの資格情報を変更できることを検証します | 2(b), 2(d) | — | Partial | — | — | DC (AUT), LA (ACF) | 5.1-1, 5.1-2 |
+| **2.1.9** 認証資格情報がファームウェアやアプリケーションにハードコードされていないことを検証します | 2(a), 2(d) | — | Partial | — | — | DP (KEY), DC (AUT) | 5.1-2, 5.4-1 |
+| **2.1.10** デバイス認証用にプロビジョニングされた資格情報がデバイスごとに一意であることを検証します | 2(d) | — | Partial | — | — | DI (DAS), DP (KEY) | 5.1-2 |
+| **2.1.11** 認証スキームが、危殆化されたデバイスや廃止されたデバイスの資格情報を失効できることを検証します | 2(d) | — | Partial | — | — | LA (ACF), DI (DAS) | — |
 | **2.2.1** Verify IoT system accounts share a common authorization framework | 2(d) | — | — | — | — | LA (AUZ), LA (ROL) | — |
 | **2.2.2** Verify least privilege is enforced; applications not run as root/admin unnecessarily | 2(d), 2(j) | — | Partial | — | — | LA (ROL), DS (OPS) | 5.6-3 |
 | **2.2.3** Verify ownership is validated upon registration and decommissioning | 2(d), 2(m) | — | — | — | — | LA (AUZ), DI (AID) | 5.11-1 |
