@@ -116,10 +116,10 @@ ETSI EN 303 645 は、欧州電気通信標準化機構 (European Telecommunicat
 | **2.1.9** 認証資格情報がファームウェアやアプリケーションにハードコードされていないことを検証します | 2(a), 2(d) | — | Partial | — | — | DP (KEY), DC (AUT) | 5.1-2, 5.4-1 |
 | **2.1.10** デバイス認証用にプロビジョニングされた資格情報がデバイスごとに一意であることを検証します | 2(d) | — | Partial | — | — | DI (DAS), DP (KEY) | 5.1-2 |
 | **2.1.11** 認証スキームが、危殆化されたデバイスや廃止されたデバイスの資格情報を失効できることを検証します | 2(d) | — | Partial | — | — | LA (ACF), DI (DAS) | — |
-| **2.2.1** Verify IoT system accounts share a common authorization framework | 2(d) | — | — | — | — | LA (AUZ), LA (ROL) | — |
-| **2.2.2** Verify least privilege is enforced; applications not run as root/admin unnecessarily | 2(d), 2(j) | — | Partial | — | — | LA (ROL), DS (OPS) | 5.6-3 |
-| **2.2.3** Verify ownership is validated upon registration and decommissioning | 2(d), 2(m) | — | — | — | — | LA (AUZ), DI (AID) | 5.11-1 |
-| **2.2.4** Verify device debug access is limited to approved staff and access is monitored or logged | 2(d), 2(l) | — | — | — | — | LA (ROL), CS (EIM) | 5.6-2 |
+| **2.2.1** IoT システムアカウントが共通の認可フレームワークを共有していることを検証します | 2(d) | — | — | — | — | LA (AUZ), LA (ROL) | — |
+| **2.2.2** 最小権限が適用されていること、アプリケーションが不必要にルートまたは管理者として実行されていないことを検証します | 2(d), 2(j) | — | Partial | — | — | LA (ROL), DS (OPS) | 5.6-3 |
+| **2.2.3** 所有権が登録時および廃棄時に妥当性確認されていることを検証します | 2(d), 2(m) | — | — | — | — | LA (AUZ), DI (AID) | 5.11-1 |
+| **2.2.4** デバイスのデバッグアクセスが許可された担当者に限定されており、アクセスが監視またはログ記録されていることを検証します | 2(d), 2(l) | — | — | — | — | LA (ROL), CS (EIM) | 5.6-2 |
 | **2.3.1** Verify sensitive information (PII, credentials) stored using strong encryption with integrity checking | 2(e), 2(f) | — | — | Partial | — | DP (STO), DP (CRY) | 5.4-1, 5.8-1 |
 | **2.3.2** Verify sensitive data and credentials can be removed from device on decommission or ownership change | 2(m) | — | — | Partial | — | DP (STO), DS (OPS) | 5.11-1 |
 | **2.3.3** Verify decommissioned devices are marked in a centrally managed database for audit | 2(m) | — | — | — | — | CS (LCT), DI (AID) | 5.11-1 |
