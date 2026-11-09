@@ -120,10 +120,10 @@ ETSI EN 303 645 は、欧州電気通信標準化機構 (European Telecommunicat
 | **2.2.2** 最小権限が適用されていること、アプリケーションが不必要にルートまたは管理者として実行されていないことを検証します | 2(d), 2(j) | — | Partial | — | — | LA (ROL), DS (OPS) | 5.6-3 |
 | **2.2.3** 所有権が登録時および廃棄時に妥当性確認されていることを検証します | 2(d), 2(m) | — | — | — | — | LA (AUZ), DI (AID) | 5.11-1 |
 | **2.2.4** デバイスのデバッグアクセスが許可された担当者に限定されており、アクセスが監視またはログ記録されていることを検証します | 2(d), 2(l) | — | — | — | — | LA (ROL), CS (EIM) | 5.6-2 |
-| **2.3.1** Verify sensitive information (PII, credentials) stored using strong encryption with integrity checking | 2(e), 2(f) | — | — | Partial | — | DP (STO), DP (CRY) | 5.4-1, 5.8-1 |
-| **2.3.2** Verify sensitive data and credentials can be removed from device on decommission or ownership change | 2(m) | — | — | Partial | — | DP (STO), DS (OPS) | 5.11-1 |
-| **2.3.3** Verify decommissioned devices are marked in a centrally managed database for audit | 2(m) | — | — | — | — | CS (LCT), DI (AID) | 5.11-1 |
-| **2.3.4** Verify sensitive information in memory is overwritten with zeros when no longer required | 2(e), 2(g) | — | — | Partial | — | DP (STO), DS (RSC) | 5.8-1 |
+| **2.3.1** 機密情報 (PII、資格情報) が完全性チェックを備える強力な暗号化を用いて保存されていることを検証します | 2(e), 2(f) | — | — | Partial | — | DP (STO), DP (CRY) | 5.4-1, 5.8-1 |
+| **2.3.2** 廃棄時や所有者変更時にデバイスから機密データや資格情報を削除できることを検証します | 2(m) | — | — | Partial | — | DP (STO), DS (OPS) | 5.11-1 |
+| **2.3.3** 廃棄されたデバイスが監査のために一元管理されたデータベースにマークされていることを検証します | 2(m) | — | — | — | — | CS (LCT), DI (AID) | 5.11-1 |
+| **2.3.4** メモリ内の機密情報が不要になった際にゼロで上書きされていることを検証します | 2(e), 2(g) | — | — | Partial | — | DP (STO), DS (RSC) | 5.8-1 |
 | **2.4.1** Verify cryptographic secrets and keys are unique per device | 2(e), 2(f) | — | — | Partial | — | DP (KEY) | 5.4-1 |
 | **2.4.2** Verify proper use of cryptography: standard algorithms, adequate key size, secure implementations | 2(e), 2(f) | — | Partial | Partial | Partial | DP (CRY) | 5.5-1, 5.8-1 |
 | **2.4.3** Verify secure sources of randomness provided by OS or hardware | 2(e), 2(k) | — | — | — | — | DP (CRY), DP (KEY) | — |
