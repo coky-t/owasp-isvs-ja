@@ -124,12 +124,12 @@ ETSI EN 303 645 は、欧州電気通信標準化機構 (European Telecommunicat
 | **2.3.2** 廃棄時や所有者変更時にデバイスから機密データや資格情報を削除できることを検証します | 2(m) | — | — | Partial | — | DP (STO), DS (OPS) | 5.11-1 |
 | **2.3.3** 廃棄されたデバイスが監査のために一元管理されたデータベースにマークされていることを検証します | 2(m) | — | — | — | — | CS (LCT), DI (AID) | 5.11-1 |
 | **2.3.4** メモリ内の機密情報が不要になった際にゼロで上書きされていることを検証します | 2(e), 2(g) | — | — | Partial | — | DP (STO), DS (RSC) | 5.8-1 |
-| **2.4.1** Verify cryptographic secrets and keys are unique per device | 2(e), 2(f) | — | — | Partial | — | DP (KEY) | 5.4-1 |
-| **2.4.2** Verify proper use of cryptography: standard algorithms, adequate key size, secure implementations | 2(e), 2(f) | — | Partial | Partial | Partial | DP (CRY) | 5.5-1, 5.8-1 |
-| **2.4.3** Verify secure sources of randomness provided by OS or hardware | 2(e), 2(k) | — | — | — | — | DP (CRY), DP (KEY) | — |
-| **2.4.4** Verify cryptographic secrets stored securely using dedicated security chip functionality | 2(e), 2(f) | — | — | Partial | — | DP (KEY), DP (STO) | 5.4-1 |
-| **2.4.5** Verify cryptographic primitives are provided by dedicated security chips | 2(e), 2(k) | — | — | — | — | DP (CRY) | — |
-| **2.4.6** Verify cryptographic libraries are certified to a recognized standard | 2(e) | — | — | — | — | DP (CRY) | — |
+| **2.4.1** 暗号化のシークレットと鍵がデバイスごとに一意であることを検証します | 2(e), 2(f) | — | — | Partial | — | DP (KEY) | 5.4-1 |
+| **2.4.2** 暗号化の適切な使用 (標準的なアルゴリズム、適切な鍵サイズ、安全な実装) を検証します | 2(e), 2(f) | — | Partial | Partial | Partial | DP (CRY) | 5.5-1, 5.8-1 |
+| **2.4.3** ランダム性の安全なソースが OS またはハードウェアによって提供されていることを検証します | 2(e), 2(k) | — | — | — | — | DP (CRY), DP (KEY) | — |
+| **2.4.4** 暗号化シークレットが専用のセキュリティチップ機能を使用して安全に保存されていることを検証します | 2(e), 2(f) | — | — | Partial | — | DP (KEY), DP (STO) | 5.4-1 |
+| **2.4.5** 暗号化プリミティブが専用のセキュリティチップにより提供されていることを検証します | 2(e), 2(k) | — | — | — | — | DP (CRY) | — |
+| **2.4.6** 暗号化ライブラリが認知されている標準に基づいて認証されていることを検証します | 2(e) | — | — | — | — | DP (CRY) | — |
 | **V3 — ソフトウェアプラットフォーム要件** | | | | | | | |
 | **3.1.1** Verify bootloader does not allow code loaded from arbitrary local or network locations | 2(f), 2(j), 2(k) | — | Partial | — | — | DS (EXE), DS (DIN) | 5.7-1 |
 | **3.1.2** Verify bootloader configurations are immutable in production | 2(b), 2(f) | — | Partial | — | — | DS (DIN), DC (CTL) | 5.7-1 |
