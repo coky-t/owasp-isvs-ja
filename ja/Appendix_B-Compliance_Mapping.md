@@ -131,14 +131,14 @@ ETSI EN 303 645 は、欧州電気通信標準化機構 (European Telecommunicat
 | **2.4.5** 暗号化プリミティブが専用のセキュリティチップにより提供されていることを検証します | 2(e), 2(k) | — | — | — | — | DP (CRY) | — |
 | **2.4.6** 暗号化ライブラリが認知されている標準に基づいて認証されていることを検証します | 2(e) | — | — | — | — | DP (CRY) | — |
 | **V3 — ソフトウェアプラットフォーム要件** | | | | | | | |
-| **3.1.1** Verify bootloader does not allow code loaded from arbitrary local or network locations | 2(f), 2(j), 2(k) | — | Partial | — | — | DS (EXE), DS (DIN) | 5.7-1 |
-| **3.1.2** Verify bootloader configurations are immutable in production | 2(b), 2(f) | — | Partial | — | — | DS (DIN), DC (CTL) | 5.7-1 |
-| **3.1.3** Verify communication interfaces (USB, UART) disabled or protected during boot | 2(j) | — | Partial | — | — | LA (IFC), DS (OPS) | 5.6-2 |
-| **3.1.4** Verify first-stage bootloader authenticity verified by hardware root of trust | 2(f), 2(k) | — | Partial | — | — | DS (DIN), SU (UPD) | 5.7-1 |
-| **3.1.5** Verify bootloader stages and application code cryptographically verified before execution | 2(f), 2(k) | — | Partial | — | — | DS (DIN), DP (CRY) | 5.7-1 |
-| **3.1.6** Verify bootloader stages do not expose sensitive information during start-up | 2(e), 2(g) | — | — | Partial | — | DP (STO) | 5.4-1 |
-| **3.1.7** Verify firmware stored in encrypted volume at rest | 2(e) | — | — | Partial | — | DP (STO) | 5.8-1 |
-| **3.1.8** Verify Direct Memory Access (DMA) is not possible during boot | 2(f), 2(k) | — | — | — | — | DS (RSC), DS (EXE) | — |
+| **3.1.1** ブートローダーが任意のローカルまたはネットワーク上の場所からコードをロードすることを許可しないことを検証します | 2(f), 2(j), 2(k) | — | Partial | — | — | DS (EXE), DS (DIN) | 5.7-1 |
+| **3.1.2** ブートローダー構成が製品で不変であることを検証します | 2(b), 2(f) | — | Partial | — | — | DS (DIN), DC (CTL) | 5.7-1 |
+| **3.1.3** 通信インタフェース (USB, UART) がブート時に無効化または保護されていることを検証します | 2(j) | — | Partial | — | — | LA (IFC), DS (OPS) | 5.6-2 |
+| **3.1.4** ファーストステージブートローダーの真正性がハードウェアルートオブトラストによって検証されていることを検証します | 2(f), 2(k) | — | Partial | — | — | DS (DIN), SU (UPD) | 5.7-1 |
+| **3.1.5** ブートローダーステージおよびアプリケーションコードが実行前に暗号で検証されていることを検証します | 2(f), 2(k) | — | Partial | — | — | DS (DIN), DP (CRY) | 5.7-1 |
+| **3.1.6** ブートローダーステージがスタートアップ時に機密情報をさらしていないことを検証します | 2(e), 2(g) | — | — | Partial | — | DP (STO) | 5.4-1 |
+| **3.1.7** ファームウェアが保存時に暗号化されたボリュームに保存されていることを検証します | 2(e) | — | — | Partial | — | DP (STO) | 5.8-1 |
+| **3.1.8** ダイレクトメモリアクセス (Direct Memory Access, DMA) がブート時に不可能であることを検証します | 2(f), 2(k) | — | — | — | — | DS (RSC), DS (EXE) | — |
 | **3.2.1** Verify embedded OS configured per industry best practices and uses secure defaults | 2(b) | — | Partial | — | — | DC (CTL) | — |
 | **3.2.2** Verify only necessary network services are exposed on each interface | 2(j) | — | Partial | — | — | LA (IFC), DS (COM) | 5.6-1 |
 | **3.2.3** Verify device does not use legacy or insecure protocols (Telnet, FTP) | 2(a), 2(j) | — | Partial | — | — | DS (COM), LA (IFC) | 5.5-1, 5.6-4 |
